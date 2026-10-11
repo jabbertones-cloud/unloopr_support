@@ -10,13 +10,13 @@
 
 ## What is Unloopr?
 
-Unloopr is a code tutor. It reads your repository's history, finds the bugs you're most likely to hit next, and teaches you about them in plain words — before they cost you.
+Unloopr is your code coach. It doesn't play for you — it makes YOU win. It reads your repository's history, finds the bugs you're most likely to hit next, and coaches you through them in plain words — before they cost you.
 
 **How it works:**
 
 1. **Connect your repo.** GitHub OAuth. Takes a minute.
 2. **Get your 3 fixes.** Every scan shows your 3 biggest issues free — with plain-words explanations of what's wrong, why it matters, and how to fix it.
-3. **Learn the pattern.** Each fix teaches you the underlying lesson, so you stop making the same mistake.
+3. **Learn the pattern.** Each fix coaches you through the underlying pattern, so you stop making the same mistake.
 
 **Who it's for:** vibe coders — people who ship AI-generated code and want to understand it, not just run it. If you've ever thought "Cursor wrote this, I hope it works," Unloopr is for you.
 
@@ -27,7 +27,7 @@ Unloopr is a code tutor. It reads your repository's history, finds the bugs you'
 ## Quick answers
 
 **Is my code safe?**
-Yes. Unloopr reads your code to teach you. It never shares your code with anyone. Your code is never used to train models. See [Security](docs/security.md).
+Yes. Unloopr reads your code to coach you. It never shares your code with anyone. Your code is never used to train models. See [Security](docs/security.md).
 
 **What do I get free?**
 Every repo scan shows your 3 biggest fixes free. Forever. No credit card. For the full report — every issue, not just the top 3 — see [Pricing](docs/pricing.md).
@@ -36,7 +36,7 @@ Every repo scan shows your 3 biggest fixes free. Forever. No credit card. For th
 Yes. Unloopr is made for you. It explains everything in simple words, no jargon. Start with our [glossary](https://unloopr.com/terms) — 105 coding terms explained like you're five (but not talked down to).
 
 **My AI wrote code that doesn't work. Can Unloopr help?**
-That's exactly what it's for. Connect the repo, get your 3 fixes, and read the lesson behind each one.
+That's exactly what it's for. Connect the repo, get your 3 fixes, and read the game plan behind each one.
 
 ---
 

@@ -33,15 +33,15 @@ Each fix shows you three things:
 
 1. **What's wrong** — in plain words, not jargon.
 2. **Why it matters** — what breaks if you ignore it.
-3. **How to fix it** — the exact change, with a lesson so you learn the pattern.
+3. **How to fix it** — the exact change, with a breakdown so you learn the pattern.
 
 Example: instead of "timing-unsafe comparison on secret material," you'll read "This login check can leak your users' passwords to an attacker measuring response times. Here's the safe way to compare secrets."
 
 ---
 
-## Step 3: Learn the lesson
+## Step 3: Make it stick
 
-Under each fix is a short lesson — 60 seconds, plain words. This is the part that breaks the loop: next time your AI writes the same bug, you'll catch it yourself.
+Under each fix is a short game plan — 60 seconds, plain words. This is the part that breaks the loop: next time your AI writes the same bug, you'll catch it yourself. Let's fix this together.
 
 ---
 
@@ -60,7 +60,7 @@ Usually 1–3 minutes depending on repo size. Very large repos take longer — w
 Yes. Private repos work the same. See [Security](security.md) — your code is never shared or used for training.
 
 **I don't understand my fixes. Now what?**
-That's normal — it means the tutor is doing its job. Read the lesson under each fix. If you're still stuck, open an **"I'm stuck"** issue and paste the fix title. We'll explain it differently.
+That's normal — it means your coach is doing its job. Read the game plan under each fix. If you're still stuck, open an **"I'm stuck"** issue and paste the fix title. We'll explain it differently.
 
 **Can I scan someone else's repo?**
 You can scan any public repo. For private repos, you need access to them on GitHub.

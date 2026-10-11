@@ -2,7 +2,7 @@
 
 ## How it works
 
-Customer wording → stable `ULP.*` problem ID → plain-words concept → public explanation → lesson → verification.
+Customer wording → stable `ULP.*` problem ID → plain-words concept → public explanation → game plan → verification.
 
 The website (unloopr.com/terms) is the canonical public explanation and discovery surface. This repository is the public agent/community/evidence layer.
 
@@ -11,7 +11,7 @@ The website (unloopr.com/terms) is the canonical public explanation and discover
 [problem-ontology.md](problem-ontology.md) holds the stable problem IDs. Each ID maps:
 
 - **Customer language** — the verbatim phrasing people actually use (from support issues, glossary searches, community posts)
-- **Plain-words concept** — the one-sentence explanation a tutor would give
+- **Plain-words concept** — the one-sentence call a coach would make
 - **Public first step** — what to do right now, before anything else
 
 ## Rules

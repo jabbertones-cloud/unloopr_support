@@ -139,9 +139,9 @@ This is the hardest kind of bug, and the most common with AI-generated code. It 
 1. **Read the error, not the code.** The error message tells you what's actually happening. Copy it and search our [glossary](https://unloopr.com/terms).
 2. **Check your assumptions.** Print values with `console.log` (or `print`). The variable you think holds a user probably holds `undefined`.
 3. **Check the boundaries.** Most "looks right" bugs live at edges: empty lists, missing files, network failures, wrong types.
-4. **Ask Unloopr.** Scan the repo — the tutor has seen this bug shape before and will explain it in plain words.
+4. **Ask Unloopr.** Scan the repo — your coach has seen this bug shape before and will walk you through it in plain words.
 
-The lesson: "looks right" is not a test. Running it is.
+The takeaway: "looks right" is not a test. Running it is.
 
 ---
 

@@ -20,4 +20,4 @@ Start from what the person sees, not from internal names.
 | "What do I get free?" | `ULP.PRICE.CONFUSION` | 3 fixes per repo, forever. Pricing doc for the rest. |
 
 ## Escalation rule
-Search the FAQ and glossary first. Teach the lesson second. Open an "I'm stuck" issue only when the person is still stuck.
+Search the FAQ and glossary first. Coach them through it second. Open an "I'm stuck" issue only when the person is still stuck.

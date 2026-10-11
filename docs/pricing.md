@@ -12,7 +12,7 @@
 
 - 3 biggest fixes per repo scan
 - Unlimited repos, unlimited scans
-- Plain-words lessons with every fix
+- Plain-words game plans with every fix
 - Glossary access (105 terms)
 - No credit card. No trial. No catch.
 
@@ -49,7 +49,7 @@ Free is the whole product's demo. It never expires.
 
 1. **No surprise bills. Ever.** Every usage fee is shown before it applies. If we can't show it, we don't charge it.
 2. **Annual = two months free.** $90/yr Founder, $180/yr Pro.
-3. **30-day money-back guarantee.** Don't love it? Full refund, no questions, keep the lessons.
+3. **30-day money-back guarantee.** Don't love it? Full refund, no questions, keep the game plans.
 4. **Cancel anytime.** You keep Free forever.
 
 ---

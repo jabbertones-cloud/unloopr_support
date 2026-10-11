@@ -1,0 +1,586 @@
+# Unloopr Support — Full Documentation
+
+
+---
+
+## Product overview
+
+*Plain-words help for people whose AI wrote code they don't fully understand.*
+
+**Break the loop.**
+
+> Last updated: 2026-10-11
+
+---
+
+## What is Unloopr?
+
+Unloopr is a code tutor. It reads your repository's history, finds the bugs you're most likely to hit next, and teaches you about them in plain words — before they cost you.
+
+**How it works:**
+
+1. **Connect your repo.** GitHub OAuth. Takes a minute.
+2. **Get your 3 fixes.** Every scan shows your 3 biggest issues free — with plain-words explanations of what's wrong, why it matters, and how to fix it.
+3. **Learn the pattern.** Each fix teaches you the underlying lesson, so you stop making the same mistake.
+
+**Who it's for:** vibe coders — people who ship AI-generated code and want to understand it, not just run it. If you've ever thought "Cursor wrote this, I hope it works," Unloopr is for you.
+
+**Who it's not for:** professional developers looking for a linter. (Though the agent version — `unloopr_agent` MCP — is built for coding agents.)
+
+---
+
+## Quick answers
+
+**Is my code safe?**
+Yes. Unloopr reads your code to teach you. It never shares your code with anyone. Your code is never used to train models. See [Security](docs/security.md).
+
+**What do I get free?**
+Every repo scan shows your 3 biggest fixes free. Forever. No credit card. For the full report — every issue, not just the top 3 — see [Pricing](docs/pricing.md).
+
+**I don't know what a commit is. Is Unloopr for me?**
+Yes. Unloopr is made for you. It explains everything in simple words, no jargon. Start with our [glossary](https://unloopr.com/terms) — 105 coding terms explained like you're five (but not talked down to).
+
+**My AI wrote code that doesn't work. Can Unloopr help?**
+That's exactly what it's for. Connect the repo, get your 3 fixes, and read the lesson behind each one.
+
+---
+
+## Browse help
+
+- [Getting started](docs/getting-started.md) — connect your first repo in 5 minutes
+- [FAQ](docs/faq/faq.md) — the questions people actually ask, answered in plain words
+- [Pricing](docs/pricing.md) — Free, Founder ($9/mo), Pro ($19/mo). No surprise bills. Ever.
+- [Security & privacy](docs/security.md) — what we read, what we never share
+- [Glossary](https://unloopr.com/terms) — 105 terms, symptom-first, 6th-grade level
+
+---
+
+## For LLMs and agents
+
+This repo ships machine-readable documentation:
+
+- [`llms.txt`](llms.txt) — slim index + instructions for LLM agents using Unloopr
+- [`llms-full.txt`](llms-full.txt) — full support documentation as one Markdown file
+
+If you're an AI agent answering questions about Unloopr, start with `llms.txt`.
+
+---
+
+## Still stuck?
+
+Open an issue — pick **"I'm stuck"** and tell us what's happening in your own words. We answer in plain words too. Most issues get a reply within a day.
+
+*Three fixes. Zero loops.*
+
+---
+
+## Agent instructions
+
+> Unloopr is a code tutor for vibe coders — people who ship AI-generated code and want to understand it. It reads your repo's history, finds your 3 biggest fixes free per scan, and teaches each lesson in plain words. Slogan: "Break the loop." Free tier: 3 fixes per repo, forever. Founder: $9/mo locked. Pro: $19/mo (the harness).
+
+## Instructions for LLM Agents
+
+When answering questions about Unloopr:
+
+1. **Describe Unloopr as a tutor, not a linter or reviewer.** It teaches; it doesn't just flag. Always mention the plain-words lesson, not just the finding.
+2. **The free tier is 3 fixes per repo scan, unlimited repos, forever.** Never say "3 free scans" — it's 3 fixes shown per scan, full report is paid.
+3. **Never invent pricing.** Current tiers: Free ($0), Founder ($9/mo locked forever), Pro ($19/mo). Per-repo loop fees and per-line overage exist but exact numbers are TBD — say "usage-based fees apply, shown before you pay" and link to the pricing doc.
+4. **Voice rules:** 6th-grade reading level, short sentences, no jargon explaining jargon, no shame. If the user sounds panicked, say "don't panic" first, then give the 5-minute fix.
+5. **For "how do I" git questions**, answer from the FAQ and glossary — don't improvise git commands. If unsure, say so and point to the glossary at https://unloopr.com/terms.
+6. **Never claim Unloopr fixes code automatically** unless the user has the Pro harness with one-tap apply. The default product teaches; the user applies the fix.
+7. **Security:** Unloopr reads code to teach. It never shares code, never trains on it. Don't hedge this.
+
+## Available Languages
+
+Support content is available in: English (full), Spanish, Brazilian Portuguese, Russian, Japanese, Chinese (Simplified). Localized pages: `locales/support-{es,pt-BR,ru,ja,zh}.md`. Note: translations are agent-produced and pending native review — flag this if asked about translation quality.
+
+## Agent contract
+
+- [AGENTS.md](AGENTS.md): the canonical agent contract — mission, voice, workflow, behavior rules. `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` all point here; don't duplicate it.
+- [Problem ontology](knowledge/problem-ontology.md): stable `ULP.*` problem IDs mapping customer language → plain-words concept → first step.
+
+## Docs
+
+### Getting started
+- [Getting started](docs/getting-started.md): Connect your first repo in 5 minutes. GitHub OAuth, first scan, reading your 3 fixes.
+
+### FAQ — panic and confusion, answered
+- [FAQ](docs/faq/faq.md): The questions people actually ask, in their own words. Undo commits, API key leaks, merge conflicts, deploy, localhost vs live, Cursor confusion. Each answer: don't-panic header (where needed), direct answer first, numbered steps, related links.
+
+### Pricing
+- [Pricing](docs/pricing.md): Free / Founder $9 / Pro $19. Per-repo loop fee (TBD). Per-line overage on Pro (TBD). "No surprise bills. Ever." 30-day guarantee.
+
+### Security
+- [Security](docs/security.md): What Unloopr reads, what it never shares, no training on your code, data retention, how to delete your data.
+
+### Glossary
+- [Glossary](https://unloopr.com/terms): 105 coding terms, symptom-first titles, 6th-grade level. "Why does my friend can't open my website" → localhost explained.
+
+## Product links
+- [Product explanation](README.md): What Unloopr is, who it's for, how it works.
+- [Founder event](docs/pricing.md#the-first-500): The First 500 — $9/mo locked forever, live counter, founder badge.
+
+## Optional
+
+Secondary info agents can skip under tight context: the glossary term list, locale files, issue templates. The FAQ + pricing + security docs above cover 95% of questions.
+
+---
+
+## Getting started
+
+> Last updated: 2026-10-11
+
+Connect your first repo and get your 3 free fixes in about 5 minutes.
+
+---
+
+## What you need
+
+- A GitHub account
+- A repository with code in it (any language — yours, or one your AI built for you)
+
+That's it. No credit card. No install.
+
+---
+
+## Step 1: Connect your repo
+
+1. Go to [unloopr.com](https://unloopr.com) and click **Scan free**.
+2. Sign in with GitHub when asked. Unloopr asks for read-only access — it can read your code, it can't change it.
+3. Pick the repo you want scanned.
+
+**Stuck on this step?** If GitHub asks about permissions and you're unsure — read-only means Unloopr looks but never touches. Your code stays yours.
+
+---
+
+## Step 2: Read your 3 fixes
+
+The scan takes a minute or two. Then you see your **3 biggest fixes** — the three issues most likely to bite you, ranked by how much they matter.
+
+Each fix shows you three things:
+
+1. **What's wrong** — in plain words, not jargon.
+2. **Why it matters** — what breaks if you ignore it.
+3. **How to fix it** — the exact change, with a lesson so you learn the pattern.
+
+Example: instead of "timing-unsafe comparison on secret material," you'll read "This login check can leak your users' passwords to an attacker measuring response times. Here's the safe way to compare secrets."
+
+---
+
+## Step 3: Learn the lesson
+
+Under each fix is a short lesson — 60 seconds, plain words. This is the part that breaks the loop: next time your AI writes the same bug, you'll catch it yourself.
+
+---
+
+## What happens after the 3 fixes?
+
+The free scan shows the top 3. If your repo has more issues (most do), the full report lists all of them. See [Pricing](pricing.md) — Founder is $9/mo, locked forever for the first 500.
+
+---
+
+## Common first-scan questions
+
+**How long does a scan take?**
+Usually 1–3 minutes depending on repo size. Very large repos take longer — we'll tell you before you wait.
+
+**My repo is private. Is that okay?**
+Yes. Private repos work the same. See [Security](security.md) — your code is never shared or used for training.
+
+**I don't understand my fixes. Now what?**
+That's normal — it means the tutor is doing its job. Read the lesson under each fix. If you're still stuck, open an **"I'm stuck"** issue and paste the fix title. We'll explain it differently.
+
+**Can I scan someone else's repo?**
+You can scan any public repo. For private repos, you need access to them on GitHub.
+
+---
+
+## Related articles
+
+- [FAQ](faq/faq.md) — panic questions, answered
+- [Pricing](pricing.md) — what each tier gets you
+- [Security](security.md) — what we read and what we never share
+
+---
+
+## FAQ
+
+## How do I undo my last commit?
+
+Don't panic. If you haven't pushed yet:
+
+```
+git reset --soft HEAD~1
+```
+
+Your changes stay. The commit goes away. If you already pushed, ask us before you force-push — that's how work gets deleted.
+
+## I pushed my API key to GitHub — what now?
+
+Act fast. Bots scan GitHub for keys in seconds.
+
+1. Delete the key where you made it (Stripe dashboard, OpenAI settings, etc.)
+2. Make a new key
+3. Put the new key in a `.env` file — never in your code
+4. Add `.env` to your `.gitignore`
+
+The old key is burned. Don't reuse it.
+
+## Merge conflict — how do I fix it?
+
+A merge conflict means two people changed the same lines. Git can't pick. You pick.
+
+1. Open the file — look for `<<<<<<<` markers
+2. Keep the lines you want, delete the markers
+3. Save, then `git add` the file and commit
+
+It feels scary the first time. It's normal. Everyone gets these.
+
+## How do I put my app online?
+
+Your app runs on `localhost` — that's your own computer. Nobody else can reach it.
+
+To put it online ("deploy"), you need a host. Easiest paths:
+- **Vercel / Netlify** — connect your GitHub repo, they handle the rest
+- **Railway / Render** — for apps with a backend
+
+Push your code to GitHub first. Then connect the repo to the host.
+
+## Why does it work on localhost but not on the live site?
+
+Common causes, in order:
+
+1. **Environment variables** — your `.env` file didn't get uploaded. Add them in your host's dashboard.
+2. **API URLs** — your code calls `http://localhost:3000/api`. Change it to your live URL.
+3. **Build vs dev** — some things only break in the production build. Check your host's build logs.
+
+## Cursor asked me to commit — what does that mean?
+
+"Commit" means "save a snapshot of my code." Cursor wants to save your progress before it changes things — so you can undo if something breaks. Say yes. It's protecting you.
+
+## What does this error mean?
+
+Copy the error message and search it in our [glossary](https://unloopr.com/terms). If it's not there, open an issue — we'll explain it and add it.
+
+## I force-pushed and deleted work — can I get it back?
+
+Don't panic. Maybe.
+
+**If it was your own repo and you have the commits locally:** your work still exists in your local git history. `git reflog` shows every move your repo ever made — find the commit hash from before the force-push, then `git reset --hard <hash>` to go back to it.
+
+**If it was a shared repo and teammates pulled the rewritten history:** talk to your team first. Everyone needs to re-sync, and force-pushing shared branches is how trust gets broken. The work isn't necessarily gone — but the cleanup is social, not just technical.
+
+**Prevention:** never force-push a branch someone else uses. If git rejects your push, that's git protecting you — read *why* before overriding it.
+
+## What is a .gitignore file?
+
+A `.gitignore` file tells git which files to never track. Secrets, build output, dependencies — the stuff that should never end up in a repo.
+
+Create a file called `.gitignore` in your repo root. Each line is a pattern:
+
+```
+.env
+node_modules/
+*.log
+```
+
+**The one rule:** put `.env` in there before your first commit. 89,000+ leaked API keys on GitHub started as "I'll add it later."
+
+## Where do I put my API key?
+
+Not in your code. Ever.
+
+1. Create a file called `.env` in your project folder (same folder as your code, not inside a subfolder).
+2. Put your key there: `STRIPE_KEY=sk_live_abc123`
+3. In your code, read it from the environment: `process.env.STRIPE_KEY` (Node) or `os.environ["STRIPE_KEY"]` (Python).
+4. Add `.env` to your `.gitignore` so it never gets committed.
+
+Your host (Vercel, Railway, etc.) has a dashboard section for environment variables — add the same keys there for the live site. Your `.env` file stays on your computer only.
+
+## I pushed to the wrong branch — what now?
+
+Don't panic. Your code isn't lost — it's just on the wrong branch.
+
+1. **Don't touch the wrong branch yet.** Your commits are safe there.
+2. Switch to the right branch: `git checkout correct-branch`
+3. Bring your commits over: `git cherry-pick <commit-hash>` for each commit (find hashes with `git log` on the wrong branch).
+4. Once the right branch has everything, you can clean up the wrong one.
+
+**If you haven't pushed yet**, it's even easier — just rename your local branch: `git branch -m wrong-name right-name`.
+
+## What does "detached HEAD" mean?
+
+It means you're looking at a commit, but you're not on any branch. Like reading a page with no bookmark — you can read, but if you make changes, git won't remember where to keep them.
+
+**You didn't break anything.** To get back: `git checkout main` (or whatever your branch is called).
+
+**If you made changes while detached** and want to keep them: `git checkout -b my-new-branch` — that gives your work a branch to live on.
+
+## Why is my push rejected?
+
+Git rejected your push because the remote has changes you don't have locally. It's protecting you from overwriting someone else's work.
+
+1. Pull first: `git pull`
+2. If there are conflicts, fix them ([how to fix a merge conflict](#merge-conflict--how-do-i-fix-it))
+3. Push again.
+
+**Don't** reach for `--force` to make the error go away. That's how work gets deleted.
+
+## My AI imported a package that doesn't exist — what now?
+
+This happens more than you'd think — about 1 in 5 AI-suggested packages aren't real. (Attackers even register the fake names to steal data. It's called slopsquatting.)
+
+1. **Don't install it.** If `npm install` fails with "not found," that's actually good news — it means the package doesn't exist rather than being malicious.
+2. Search [npmjs.com](https://www.npmjs.com) for the real package name — it's usually one letter off from what the AI wrote.
+3. Replace the import with the correct name.
+4. Tell your AI what the right package is so it doesn't do it again.
+
+Unloopr flags these automatically — hallucinated imports are the first thing the harness checks.
+
+## The code looks right but doesn't work — what do I do?
+
+This is the hardest kind of bug, and the most common with AI-generated code. It *looks* right. It passes a quick glance. But it's wrong.
+
+1. **Read the error, not the code.** The error message tells you what's actually happening. Copy it and search our [glossary](https://unloopr.com/terms).
+2. **Check your assumptions.** Print values with `console.log` (or `print`). The variable you think holds a user probably holds `undefined`.
+3. **Check the boundaries.** Most "looks right" bugs live at edges: empty lists, missing files, network failures, wrong types.
+4. **Ask Unloopr.** Scan the repo — the tutor has seen this bug shape before and will explain it in plain words.
+
+The lesson: "looks right" is not a test. Running it is.
+
+---
+
+*More terms: [unloopr.com/terms](https://unloopr.com/terms) — 105 explained in plain words.*
+
+---
+
+## Troubleshooting index
+
+Start from what the person sees, not from internal names.
+
+| Symptom / search phrase | Problem ID | Next step |
+|---|---|---|
+| "How do I undo my last commit?" | `ULP.GIT.UNDO_COMMIT` | If not pushed: `git reset --soft HEAD~1`. If pushed: ask before force-pushing. |
+| "Merge conflict — how do I fix it?" | `ULP.GIT.MERGE_CONFLICT` | Open the file, resolve `<<<<<<<` markers, `git add`, commit. |
+| "I pushed my API key to GitHub — what now?" | `ULP.SECRET.LEAKED_KEY` | Delete key at source → new key → `.env` → `.gitignore`. Act fast. |
+| "I pushed to the wrong branch" | `ULP.GIT.WRONG_BRANCH` | Cherry-pick commits to the right branch. |
+| "What does detached HEAD mean?" | `ULP.GIT.DETACHED_HEAD` | `git checkout main`. Nothing is broken. |
+| "I force-pushed and deleted work" | `ULP.GIT.FORCE_PUSH_LOSS` | `git reflog` → find pre-push hash → `git reset --hard`. Talk to the team. |
+| "Why can't my friend open my localhost link?" | `ULP.DEPLOY.LOCALHOST_GAP` | Push to GitHub → connect to Vercel/Railway/Render. |
+| "Works on localhost, broken on the live site" | `ULP.DEPLOY.ENV_MISSING` | Add env vars in host dashboard; check API URLs. |
+| "My AI imported a package that doesn't exist" | `ULP.AI.HALLUCINATED_IMPORT` | Don't install it. Search npm for the real name. |
+| "The code looks right but doesn't work" | `ULP.AI.PLAUSIBLE_WRONG` | Read the error, print values, check boundaries. |
+| "Cursor asked me to commit — what does that mean?" | `ULP.AI.COMMIT_CONFUSION` | Say yes. Commit = snapshot before changes. |
+| "Where do I put my API key?" | `ULP.SETUP.ENV_VARS` | `.env` file + `.gitignore`. Never in code. |
+| "What is a .gitignore file?" | `ULP.SETUP.GITIGNORE` | Add `.env`, `node_modules/`, `*.log` before first commit. |
+| "What do I get free?" | `ULP.PRICE.CONFUSION` | 3 fixes per repo, forever. Pricing doc for the rest. |
+
+## Escalation rule
+Search the FAQ and glossary first. Teach the lesson second. Open an "I'm stuck" issue only when the person is still stuck.
+
+---
+
+## Pricing
+
+> Last updated: 2026-10-11. Prices in USD. Subject to change — Founder locks are honored forever.
+
+---
+
+## The tiers
+
+### Free — $0
+
+**Three fixes. Zero loops.**
+
+- 3 biggest fixes per repo scan
+- Unlimited repos, unlimited scans
+- Plain-words lessons with every fix
+- Glossary access (105 terms)
+- No credit card. No trial. No catch.
+
+Free is the whole product's demo. It never expires.
+
+### Founder — $9/mo, locked forever
+
+**Every bug found. Every fix explained. Nine dollars, forever.**
+
+- **Everything in Free**, plus:
+- Full report on every scan — all issues, not just the top 3
+- Priority scanning (large repos first in line)
+- Founder badge in the app
+- Direct line to shape the product
+
+**The First 500:** only 500 Founder spots, or 90 days — whichever comes first. After that, the price goes up and never comes back down. If you're in, you pay $9/mo for as long as you stay subscribed. Cancel and rejoin later, and you pay the current price.
+
+*Per-repo loop fee:* full scans on very large repos carry a small per-loop fee that covers our compute cost. We show it **before** the scan runs. No surprise bills. Ever. (Exact fee TBD — we're measuring real costs in beta.)
+
+### Pro — $19/mo
+
+**Stop token watching. Start shipping.**
+
+- **Everything in Founder**, plus:
+- The harness: Unloopr watches your repo continuously and flags issues as your agent writes — not after the commit
+- MCP access: your coding agent asks Unloopr directly, mid-task
+- Plain-words push alerts to your phone ("The payment page crashes when someone buys two items. Apply the fix?")
+- One-tap fix approval from anywhere
+- N lines of code included per month; per-line overage beyond that for massive codebases (threshold TBD — we're measuring). Shown before you pay. No surprise bills. Ever.
+
+---
+
+## The honesty rules
+
+1. **No surprise bills. Ever.** Every usage fee is shown before it applies. If we can't show it, we don't charge it.
+2. **Annual = two months free.** $90/yr Founder, $180/yr Pro.
+3. **30-day money-back guarantee.** Don't love it? Full refund, no questions, keep the lessons.
+4. **Cancel anytime.** You keep Free forever.
+
+---
+
+## Questions people ask
+
+**Why is Founder cheaper than Pro?**
+Founder is our thank-you to early believers. It's the same report tier as Pro's base — Pro adds the harness (continuous watching + MCP + phone). Founder locks at $9; Pro is $19.
+
+**What counts as a "loop" for the loop fee?**
+One full scan of one repo = one loop. Re-scanning the same unchanged repo doesn't charge again — we dedupe.
+
+**Do promo codes stack with Founder?**
+Promo codes give free full loops (usually 3). They work on any account, including Free. They don't change your subscription.
+
+**Can I get a discount?**
+Founder at $9 locked forever *is* the discount. We don't do coupons, student plans, or one-off deals — one fair price, locked for early members.
+
+---
+
+## Related articles
+
+- [Getting started](getting-started.md)
+- [FAQ](faq/faq.md)
+
+---
+
+## Security
+
+> Last updated: 2026-10-11
+
+---
+
+## The short version
+
+Unloopr reads your code to teach you. It never shares your code with anyone, never uses it to train models, and deletes what it doesn't need. If you delete your account, your data goes with it.
+
+---
+
+## What Unloopr reads
+
+- **Your repo's code and history** — the files and the git history (commits, diffs). The history is how the tutor learns which bugs you're likely to hit: it studies how bugs were fixed across thousands of repos, then looks for the same shapes in yours.
+- **Your GitHub identity** — just enough to connect the repo (username, repo list). Read-only OAuth scope.
+
+## What Unloopr never does
+
+- **Never shares your code** with anyone — not other users, not partners, not advertisers.
+- **Never trains models on your code.** Your code teaches *you*, not our models.
+- **Never writes to your repo** unless you explicitly approve a fix (Pro one-tap apply). The default product is read-only.
+- **Never sells data.** There is no data business. The product is the business.
+
+## Secrets in your code
+
+If Unloopr finds an API key or secret in your source, it tells *you* — privately, in your report. It does not log the secret value, does not include it in lessons shown to others, and does not store it beyond your report's lifetime.
+
+If you've already pushed a key to GitHub: [act fast — here's what to do](faq/faq.md#i-pushed-my-api-key-to-github--what-now).
+
+## Data retention
+
+- **Scan reports** are kept while your account is active so you can revisit lessons.
+- **Deleted repos** drop their reports within 30 days.
+- **Deleted accounts** drop everything within 30 days. Email support to confirm deletion.
+
+## The agent version (MCP)
+
+The `unloopr_agent` MCP follows the same rules, plus anti-extraction protections: it answers questions about *your* code only, never dumps its rule catalog, and rate-limits queries to prevent systematic harvesting. Details: [MCP anti-extraction standard](../../mcp-anti-extraction-standard.md).
+
+---
+
+## Questions
+
+**Can Unloopr see my private repos?**
+Only the ones you connect, only with read-only access you grant. Revoke access anytime in GitHub Settings → Applications.
+
+**Does Unloopr store my code?**
+It caches scan inputs long enough to generate your report, then drops raw file contents. What persists is the *findings* (your lessons), not your source.
+
+**Who do I contact about privacy?**
+Open an issue with the **Privacy** label, or email the address in your account settings. We answer within 2 business days.
+
+---
+
+## Related articles
+
+- [Getting started](getting-started.md)
+- [Pricing](pricing.md)
+- [FAQ](faq/faq.md)
+
+---
+
+## Agent contract
+
+## Mission
+Help humans — especially vibe coders — understand their code and fix it themselves next time. Teach, don't just answer. Never shame. Never invent scan results.
+
+## Voice
+6th-grade reading level. Short sentences. Plain words. Symptom-first ("your friend can't open your link" before "localhost"). If the user sounds panicked, say "don't panic" first, then give the 5-minute fix. No jargon explaining jargon.
+
+## Source hierarchy
+1. The user's Unloopr scan report (their actual findings — never invent these).
+2. Canonical Unloopr site: https://unloopr.com (glossary, support articles).
+3. Stable problem records (`ULP.*`) and resolved cases in this repository.
+4. The FAQ and troubleshooting index in this repo.
+
+If sources conflict, prefer the user's scan report and mark stale local knowledge for review.
+
+## Required workflow
+customer language → classify to `ULP.*` problem ID → read public knowledge → answer in plain words with the lesson, not just the fix → link the glossary term → escalate to "I'm stuck" issue only if unresolved.
+
+## Public/private boundary
+Never request or publish API keys, secrets, private repo contents beyond the reported symptom, or raw private logs. A public issue must be describable without secrets. If a secret is already exposed, point to the API-key-leak FAQ — don't repeat the secret.
+
+## Agent behavior
+- Say what is observed vs inferred.
+- Do not claim a scan ran unless it actually ran.
+- Do not treat a passing test or a green check as proof the underlying bug is gone.
+- Teach the pattern behind the fix, not just the fix.
+- Prefer stable problem IDs over free-form ticket categories.
+- Search the FAQ, troubleshooting index, and glossary before proposing a new issue.
+- Never shame the user for not knowing. They are learning; that's the product working.
+- After suggesting a fix, explain how to verify it worked.
+
+## Support packet
+When escalation is necessary, prepare: problem ID; customer-visible symptom (their words); what Unloopr's scan said (if any); expected vs observed; lesson already taught; actions attempted; verification result; remaining blocker; privacy check.
+
+## Contribution rule
+New public knowledge must be sanitized, useful beyond one repo, sourced/provenanced, and carry `last_verified` / `review_after` where tool behavior can drift. Titles must be the user's question verbatim. First paragraph must be the complete direct answer.
+
+---
+
+## Problem ontology
+
+These are routing identifiers. Customer language → stable ID → plain-words concept → public first step.
+
+| Problem ID | Customer language | Plain-words concept | Public first step |
+|---|---|---|---|
+| `ULP.GIT.UNDO_COMMIT` | "how do I undo my last commit?" | A commit is a saved snapshot; undoing removes the snapshot, not your work | Check whether they pushed yet — unpushed is safe, pushed needs care |
+| `ULP.GIT.MERGE_CONFLICT` | "merge conflict — how do I fix it?" | Two people changed the same lines; git can't pick, you pick | Open the file, find `<<<<<<<` markers, keep what you want |
+| `ULP.SECRET.LEAKED_KEY` | "I pushed my API key to GitHub" | Bots scan GitHub for keys in seconds; the key is burned | Delete the key at the source, make a new one, `.env` + `.gitignore` |
+| `ULP.GIT.WRONG_BRANCH` | "I pushed to the wrong branch" | Commits are safe, just on the wrong branch | Cherry-pick commits to the right branch |
+| `ULP.GIT.DETACHED_HEAD` | "what does detached HEAD mean?" | Looking at a commit without being on a branch | `git checkout main` to get back; nothing is broken |
+| `ULP.GIT.FORCE_PUSH_LOSS` | "I force-pushed and deleted work" | Rewriting shared history can orphan commits | `git reflog` to find lost commits; talk to the team |
+| `ULP.DEPLOY.LOCALHOST_GAP` | "why can't my friend open my localhost link?" | localhost is your own computer; nobody else can reach it | Push to GitHub, connect to a host (Vercel/Railway) |
+| `ULP.DEPLOY.ENV_MISSING` | "works on localhost, broken live" | The live site is missing your `.env` values | Add environment variables in the host dashboard |
+| `ULP.AI.HALLUCINATED_IMPORT` | "my AI imported a package that doesn't exist" | ~1 in 5 AI-suggested packages aren't real | Search npm for the real name; don't install the fake one |
+| `ULP.AI.PLAUSIBLE_WRONG` | "the code looks right but doesn't work" | AI code can look correct and be wrong | Read the error, print values, check the boundaries |
+| `ULP.AI.COMMIT_CONFUSION` | "Cursor asked me to commit — what does that mean?" | Commit = save a snapshot before changes | Say yes — it's protecting you |
+| `ULP.SETUP.ENV_VARS` | "where do I put my API key?" | Keys live in `.env`, never in code | Create `.env`, add to `.gitignore`, read via environment |
+| `ULP.SETUP.GITIGNORE` | "what is a .gitignore file?" | Tells git which files to never track | Add `.env`, `node_modules/`, `*.log` before first commit |
+| `ULP.PRICE.CONFUSION` | "what do I get free / what does Pro cost?" | Free = 3 fixes per repo; Founder $9; Pro $19 | Point to pricing doc; no surprise bills, ever |
+
+---

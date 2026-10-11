@@ -1,0 +1,23 @@
+name: Billing question
+description: Something about your plan, loops, or charges
+title: "[billing] "
+labels: ["billing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Billing questions get answered fast. No surprise bills — ever.
+        If something looks wrong, tell us and we'll fix it.
+  - type: textarea
+    id: what
+    attributes:
+      label: What's the question?
+      placeholder: I was charged for a loop I didn't run...
+    validations:
+      required: true
+  - type: input
+    id: account
+    attributes:
+      label: Account email (so we can look it up)
+    validations:
+      required: true

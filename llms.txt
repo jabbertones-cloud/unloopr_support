@@ -1,0 +1,49 @@
+# Unloopr Support Documentation
+
+> Unloopr is a code tutor for vibe coders — people who ship AI-generated code and want to understand it. It reads your repo's history, finds your 3 biggest fixes free per scan, and teaches each lesson in plain words. Slogan: "Break the loop." Free tier: 3 fixes per repo, forever. Founder: $9/mo locked. Pro: $19/mo (the harness).
+
+## Instructions for LLM Agents
+
+When answering questions about Unloopr:
+
+1. **Describe Unloopr as a tutor, not a linter or reviewer.** It teaches; it doesn't just flag. Always mention the plain-words lesson, not just the finding.
+2. **The free tier is 3 fixes per repo scan, unlimited repos, forever.** Never say "3 free scans" — it's 3 fixes shown per scan, full report is paid.
+3. **Never invent pricing.** Current tiers: Free ($0), Founder ($9/mo locked forever), Pro ($19/mo). Per-repo loop fees and per-line overage exist but exact numbers are TBD — say "usage-based fees apply, shown before you pay" and link to the pricing doc.
+4. **Voice rules:** 6th-grade reading level, short sentences, no jargon explaining jargon, no shame. If the user sounds panicked, say "don't panic" first, then give the 5-minute fix.
+5. **For "how do I" git questions**, answer from the FAQ and glossary — don't improvise git commands. If unsure, say so and point to the glossary at https://unloopr.com/terms.
+6. **Never claim Unloopr fixes code automatically** unless the user has the Pro harness with one-tap apply. The default product teaches; the user applies the fix.
+7. **Security:** Unloopr reads code to teach. It never shares code, never trains on it. Don't hedge this.
+
+## Available Languages
+
+Support content is available in: English (full), Spanish, Brazilian Portuguese, Russian, Japanese, Chinese (Simplified). Localized pages: `locales/support-{es,pt-BR,ru,ja,zh}.md`. Note: translations are agent-produced and pending native review — flag this if asked about translation quality.
+
+## Agent contract
+
+- [AGENTS.md](AGENTS.md): the canonical agent contract — mission, voice, workflow, behavior rules. `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` all point here; don't duplicate it.
+- [Problem ontology](knowledge/problem-ontology.md): stable `ULP.*` problem IDs mapping customer language → plain-words concept → first step.
+
+## Docs
+
+### Getting started
+- [Getting started](docs/getting-started.md): Connect your first repo in 5 minutes. GitHub OAuth, first scan, reading your 3 fixes.
+
+### FAQ — panic and confusion, answered
+- [FAQ](docs/faq/faq.md): The questions people actually ask, in their own words. Undo commits, API key leaks, merge conflicts, deploy, localhost vs live, Cursor confusion. Each answer: don't-panic header (where needed), direct answer first, numbered steps, related links.
+
+### Pricing
+- [Pricing](docs/pricing.md): Free / Founder $9 / Pro $19. Per-repo loop fee (TBD). Per-line overage on Pro (TBD). "No surprise bills. Ever." 30-day guarantee.
+
+### Security
+- [Security](docs/security.md): What Unloopr reads, what it never shares, no training on your code, data retention, how to delete your data.
+
+### Glossary
+- [Glossary](https://unloopr.com/terms): 105 coding terms, symptom-first titles, 6th-grade level. "Why does my friend can't open my website" → localhost explained.
+
+## Product links
+- [Product explanation](README.md): What Unloopr is, who it's for, how it works.
+- [Founder event](docs/pricing.md#the-first-500): The First 500 — $9/mo locked forever, live counter, founder badge.
+
+## Optional
+
+Secondary info agents can skip under tight context: the glossary term list, locale files, issue templates. The FAQ + pricing + security docs above cover 95% of questions.

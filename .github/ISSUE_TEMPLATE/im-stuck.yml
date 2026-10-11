@@ -1,0 +1,47 @@
+name: I'm stuck
+description: Something's broken and you don't know why
+title: "[stuck] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Don't worry. Describe what you see — we'll figure it out together.
+        Write like you'd text a friend. No jargon needed.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What were you trying to do? What went wrong?
+      placeholder: I tried to put my app online and now it says "not found"...
+    validations:
+      required: true
+  - type: textarea
+    id: error-message
+    attributes:
+      label: Error message (if any)
+      description: Copy-paste the exact error. Screenshots help too.
+      placeholder: Paste it here
+    validations:
+      required: false
+  - type: dropdown
+    id: ai-tool
+    attributes:
+      label: Did an AI tool make this code?
+      description: Helps us explain at the right level
+      options:
+        - Cursor
+        - ChatGPT / Claude
+        - Lovable / Bolt / v0
+        - Something else
+        - No, I wrote it
+        - Not sure
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safety check
+      options:
+        - label: I didn't paste any API keys, passwords, or secrets above. (If you did, delete them now and make new ones.)
+          required: true

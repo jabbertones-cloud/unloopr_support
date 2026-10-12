@@ -39,4 +39,4 @@ For people whose AI wrote the code and who are figuring out the rest.
 
 Every question above is verbatim (or near-verbatim) from a real person — mined from GitHub issues, Reddit, Stack Overflow, Dev.to, Cursor Forum, and other communities in October 2026. Engagement counts are real GitHub issue search numbers. Nothing was invented.
 
-The voice rules: short sentences, no jargon without a gloss, symptom first, "no shame" at the end of every panic guide. Written for ESL readers — grade 3–6 reading level.
+The voice rules: short sentences, no jargon without a gloss, symptom first, "no shame" at the end of every panic guide. Written in short sentences for global readers, including ESL speakers.

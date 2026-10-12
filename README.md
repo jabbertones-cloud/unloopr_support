@@ -1,5 +1,7 @@
 # Unloopr Support
 
+![Unloopr logo](logo.png)
+
 *Plain-words help for people whose AI wrote code they don't fully understand.*
 
 **Break the loop.**

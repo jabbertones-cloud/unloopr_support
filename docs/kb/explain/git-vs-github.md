@@ -23,3 +23,15 @@ GitHub is a website that **hosts** your Git projects online. It's where your cod
 ## The one-liner
 
 **Git = the save system. GitHub = the cloud where saves are stored.**
+
+---
+
+## Never panic about this again
+
+Unloopr is built for people learning the difference — it coaches you inside your actual GitHub repo.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

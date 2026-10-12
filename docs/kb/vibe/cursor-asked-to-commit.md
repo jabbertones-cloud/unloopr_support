@@ -30,3 +30,15 @@ Commits are save points. If the next change breaks something, you can go back to
 
 - [What is a commit?](../explain/what-is-commit.md)
 - [What is the difference between git commit and git push?](../explain/commit-vs-push.md)
+
+---
+
+## Never panic about this again
+
+When your AI asks you to do something you don't understand, Unloopr explains it in plain words first.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

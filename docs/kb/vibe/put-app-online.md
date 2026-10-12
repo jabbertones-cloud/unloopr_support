@@ -37,3 +37,15 @@ You don't manage servers anymore. Push to GitHub → connect to a host → deplo
 
 - [Why does it work on localhost but not on the live site?](../explain/localhost-vs-live.md) — when it's live but broken
 - [My AI built an app — how do I put it on GitHub?](ai-app-to-github.md) — step zero
+
+---
+
+## Never panic about this again
+
+About to put your app online? Unloopr scans it first — 3 fixes free, so you ship with confidence.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

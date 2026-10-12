@@ -30,3 +30,15 @@ That's a commit. It's on your computer. Nobody else sees it until you push.
 
 - [What is the difference between git commit and git push?](commit-vs-push.md)
 - [How do I undo my last commit?](../panic/undo-last-commit.md)
+
+---
+
+## Never panic about this again
+
+Connect your repo and Unloopr will show you what your commits actually contain — in words you'll understand.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

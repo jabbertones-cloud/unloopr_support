@@ -33,3 +33,15 @@ CORS = the browser blocking your site from talking to another site. Fix it on th
 ## No shame
 
 CORS confuses senior developers too. It's a security feature with an error message that reads like your code is broken. It's not.
+
+---
+
+## Never panic about this again
+
+Unloopr matches your code against bug patterns mined from thousands of real fixes — and explains each one simply.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

@@ -38,3 +38,15 @@ If your app uses API keys, **don't push yet**. Read [Where do I put my API key?]
 
 - [How do I put my app online?](put-app-online.md) — the next step after GitHub
 - [What is a commit?](../explain/what-is-commit.md)
+
+---
+
+## Never panic about this again
+
+Your AI built the app. Unloopr checks what it got wrong — hallucinated imports, leaked secrets — and teaches you each fix.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

@@ -49,3 +49,15 @@ A merge conflict is a **question**, not an error. Git is asking you to choose. P
 ## No shame
 
 1.7 million people asked this. Merge conflicts scare everyone the first ten times. After that, they're just Tuesday.
+
+---
+
+## Never panic about this again
+
+Unloopr scans your repo and explains what's actually happening in it — in plain words, not git jargon.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

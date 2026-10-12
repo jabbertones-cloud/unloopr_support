@@ -40,3 +40,15 @@ Commits can be moved. `cherry-pick` copies a commit onto whatever branch you're 
 ## No shame
 
 Branches have confusing names. Everyone pushes to the wrong one eventually. The fix takes two minutes.
+
+---
+
+## Never panic about this again
+
+Unloopr reads your repo's history and coaches you through what's actually in it — branch by branch.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

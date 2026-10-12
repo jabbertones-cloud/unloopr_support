@@ -37,3 +37,15 @@ Detached HEAD = "you're not on a branch." Get back on one with `git checkout`, a
 ## No shame
 
 The name is awful. It sounds like something snapped off. It's just Git being dramatic about a missing bookmark.
+
+---
+
+## Never panic about this again
+
+Unloopr explains your repo in plain words — what state it's in, what that means, what to do next.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

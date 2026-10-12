@@ -38,3 +38,15 @@ This creates a fresh commit that reverses what the last one did. Safe for shared
 ## No shame
 
 Everyone does this. The command has "reset" in the name and it sounds scary, but `--soft` means "be gentle." Your work is still there.
+
+---
+
+## Never panic about this again
+
+Unloopr reads your repo's history and shows you the 3 riskiest spots — so fewer commits ever need undoing.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

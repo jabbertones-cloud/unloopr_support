@@ -39,3 +39,15 @@ Your AI wrote the key directly into the code. That's normal — the AI doesn't k
 ## No shame
 
 89,000+ people did this. The AI put it there, you pushed it, bots found it. It happens to everyone once. Now you know the `.env` rule and it won't happen twice.
+
+---
+
+## Never panic about this again
+
+Unloopr's secret scanner catches leaked keys in your code before they ship — not after the bots find them.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

@@ -39,3 +39,15 @@ Errors are **directions**, not verdicts. The first line tells you the category. 
 ## No shame
 
 "What does this error mean?" is the most human question in programming. Everyone asks it. The skill isn't knowing — it's knowing how to read.
+
+---
+
+## Never panic about this again
+
+Unloopr translates scary errors into plain English — what broke, why it matters, and the exact fix.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

@@ -27,3 +27,15 @@ Localhost = your computer. Live = someone else's computer. Anything your compute
 ## No shame
 
 "Why does my friend can't open my website http://localhost:3000??" — real question, from a real person. Localhost is your computer's private address. Nobody else can open it. That's the whole point.
+
+---
+
+## Never panic about this again
+
+Before you ship, Unloopr checks your code for the things that break between localhost and live.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

@@ -25,3 +25,15 @@ Short version: **commit = save on your computer. Push = upload to GitHub.**
 ## Can you push without committing?
 
 No. Push uploads **commits**. No commits, nothing to upload. The order is always: add → commit → push.
+
+---
+
+## Never panic about this again
+
+Every Unloopr scan teaches you the pattern behind each fix — you'll learn git from your real repo, not a tutorial.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

@@ -43,3 +43,15 @@ If a key is in your code and you push to GitHub, bots find it in seconds and use
 ## See also
 
 - [I accidentally committed my API key — what now?](../panic/api-key-leaked.md) — if it's too late for prevention
+
+---
+
+## Never panic about this again
+
+Unloopr's secret scanner finds keys sitting in the wrong place and shows you exactly where they belong.
+
+**[Unloopr](https://unloopr.com)** is a code coach for your GitHub repos. Connect a repo and get your 3 biggest fixes in plain words — what's wrong, why it matters, how to fix it.
+
+- **Free forever:** 3 fixes per repo. No credit card.
+- **Read-only:** Unloopr looks at your code. It never changes it.
+- **5 minutes:** connect at [unloopr.com](https://unloopr.com), pick a repo, read your fixes.

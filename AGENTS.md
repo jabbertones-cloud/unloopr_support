@@ -35,3 +35,7 @@ When escalation is necessary, prepare: problem ID; customer-visible symptom (the
 
 ## Contribution rule
 New public knowledge must be sanitized, useful beyond one repo, sourced/provenanced, and carry `last_verified` / `review_after` where tool behavior can drift. Titles must be the user's question verbatim. First paragraph must be the complete direct answer.
+
+## GitHub issue read/report/reply integration
+
+Agent clients should use the maintained official GitHub MCP `issues` toolset, with the user's own GitHub authorization. Read [AGENT-GITHUB-ISSUES.md](AGENT-GITHUB-ISSUES.md) for search, read, file, comment, privacy and verification requirements. Do not create test issues or embed a product-owned GitHub token.

@@ -1,70 +1,45 @@
-# Unloopr Support
+# Unloopr support
 
-![Unloopr logo](logo.png)
+Get unstuck when a code scan, agent connection or explanation does not work.
 
-*Plain-words help for people whose AI wrote code they don't fully understand.*
+**[Search issues](https://github.com/jabbertones-cloud/unloopr_support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)**
 
-**Break the loop.**
+## Find an answer first
 
-> Last updated: 2026-10-11
+Search the [open and closed issues](https://github.com/jabbertones-cloud/unloopr_support/issues?q=is%3Aissue) for your symptom or MCP tool name. You may find a workaround without opening a new report.
 
----
+- [Getting started](docs/getting-started.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [FAQ](docs/faq/faq.md)
+- [Glossary](https://unloopr.com/terms)
 
-## What is Unloopr?
+## Report a problem
 
-Unloopr is your code coach. It doesn't play for you — it makes YOU win. It reads your repository's history, finds the bugs you're most likely to hit next, and coaches you through them in plain words — before they cost you.
+1. Select **Report a bug** and choose the matching issue form.
+2. Describe what you tried, what happened and the result you wanted. Include the affected Unloopr feature, your AI tool or MCP client and safe reproduction steps. You do not need to know coding terminology.
+3. Remove passwords, access tokens, customer information, private source code, screenshots with personal data and raw logs before posting.
+4. Submit and keep the issue URL so you or your agent can check replies.
 
-**How it works:**
+**Do not publish private or security information.** Use [private product support](https://unloopr.com/support) when the details cannot be shared publicly. Read [Security](SECURITY.md) before reporting a vulnerability.
 
-1. **Connect your repo.** GitHub OAuth. Takes a minute.
-2. **Get your 3 fixes.** Every scan shows your 3 biggest issues free — with plain-words explanations of what's wrong, why it matters, and how to fix it.
-3. **Learn the pattern.** Each fix coaches you through the underlying pattern, so you stop making the same mistake.
+## Use an AI agent to get help
 
-**Who it's for:** vibe coders — people who ship AI-generated code and want to understand it, not just run it. If you've ever thought "Cursor wrote this, I hope it works," Unloopr is for you.
+An agent with a separately authorized GitHub connection can search issues, read the full discussion, prepare a safe report and, when requested, create an issue or post a reply. The maintained [GitHub MCP Server](https://github.com/github/github-mcp-server) exposes these issue operations. The product MCP does **not** automatically give the agent GitHub permissions.
 
-**Who it's not for:** professional developers looking for a linter. (Though the agent version — `unloopr_agent` MCP — is built for coding agents.)
+Ask your agent: **"Check existing Unloopr support issues for this error and tell me whether there is a fix or workaround."**
 
----
+To file a report, ask: **"Prepare a public bug report with safe details. Search for duplicates, then file it using my GitHub connection."**
 
-## Quick answers
+If GitHub is not connected, your agent can prepare a report and give you the [new issue form](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose). It must not claim a ticket was created.
 
-**Is my code safe?**
-Yes. Unloopr reads your code to coach you. It never shares your code with anyone. Your code is never used to train models. See [Security](docs/security.md).
+Read [Agent workflow](AGENTS.md) and [GitHub issue operations](AGENT-GITHUB-ISSUES.md).
 
-**What do I get free?**
-Every repo scan shows your 3 biggest fixes free. Forever. No credit card. For the full report — every issue, not just the top 3 — see [Pricing](docs/pricing.md).
+## What happens next
 
-**I don't know what a commit is. Is Unloopr for me?**
-Yes. Unloopr is made for you. It explains everything in simple words, no jargon. Start with our [glossary](https://unloopr.com/terms) — 105 coding terms explained like you're five (but not talked down to).
+You can track an issue and respond in its GitHub thread. A maintainer may ask for a minimal reproduction, share a workaround or request a new test. There is no guaranteed response time. A report is not fixed until the affected behavior has been independently checked.
 
-**My AI wrote code that doesn't work. Can Unloopr help?**
-That's exactly what it's for. Connect the repo, get your 3 fixes, and read the game plan behind each one.
+Do not include your private repository name, code, scan report or secrets in an issue. A passing code check is not proof of a fixed deployed application.
 
----
+## Contribute
 
-## Browse help
-
-- [Getting started](docs/getting-started.md) — connect your first repo in 5 minutes
-- [FAQ](docs/faq/faq.md) — the questions people actually ask, answered in plain words
-- [Pricing](docs/pricing.md) — Free, Founder ($9/mo), Pro ($19/mo). No surprise bills. Ever.
-- [Security & privacy](docs/security.md) — what we read, what we never share
-- [Glossary](https://unloopr.com/terms) — 105 terms, symptom-first, 6th-grade level
-
----
-
-## For LLMs and agents
-
-This repo ships machine-readable documentation:
-
-- [`llms.txt`](llms.txt) — slim index + instructions for LLM agents using Unloopr
-- [`llms-full.txt`](llms-full.txt) — full support documentation as one Markdown file
-
-If you're an AI agent answering questions about Unloopr, start with `llms.txt`.
-
----
-
-## Still stuck?
-
-Open an issue — pick **"I'm stuck"** and tell us what's happening in your own words. We answer in plain words too. Most issues get a reply within a day.
-
-*Three fixes. Zero loops.*
+Corrections and reusable troubleshooting notes are welcome. See [Contributing](CONTRIBUTING.md) and [Support policy](SUPPORT.md).

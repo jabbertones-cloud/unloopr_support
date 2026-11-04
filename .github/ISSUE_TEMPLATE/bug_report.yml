@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible Unloopr or Unloopr MCP defect
+title: "[Bug] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. Never paste private repository contents, access tokens, passwords or secrets.
+  - type: textarea
+    id: symptom
+    attributes:
+      label: What broke?
+      description: What happened and which Unloopr feature or MCP tool was involved?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: Steps that do not reveal private code or customer data
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Unloopr and MCP client version
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public report safety
+      options:
+        - label: This report contains no secrets, private source code or sensitive data
+          required: true

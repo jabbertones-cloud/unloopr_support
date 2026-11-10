@@ -12,7 +12,7 @@
 
 ## The engineering suite
 - [Suite capabilities and status](docs/suite.md): Unloopr diagnosis, Overwrite Guard regression behavior bank (opt-in local/CI), AgentGit agent governance and Sweepr reclamation, with StateLayer internal preview and local-only Handroll Rehab. Do not market all components as public paid features.
-- [Suite webpage](https://unloopr.com/suite): the website route will be verified after its release; current production status remains https://unloopr.com/status.
+- [Live suite webpage](https://unloopr.com/suite): verified HTTP 200 on November 10, 2026 with canonical URL and sitemap. It describes Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab without asserting all are publicly purchasable. For updated availability see https://unloopr.com/status.
 
 ## AI coding agents and authenticated MCP
 - MCP endpoint: `https://mcp.unloopr.com/mcp` (authenticated HTTP POST; 401 challenge expected without a token)

@@ -11,7 +11,7 @@
 
 ## The engineering suite
 
-[Explore the complete suite](docs/suite.md): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
+[Explore the complete suite](docs/suite.md) or [view its live website](https://unloopr.com/suite): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
 
 ## Start with what works today
 
@@ -53,7 +53,7 @@ _Last product availability check: 2026-11-10. The linked live service and reposi
 
 ## The engineering suite
 - [Suite capabilities and status](docs/suite.md): Unloopr diagnosis, Overwrite Guard regression behavior bank (opt-in local/CI), AgentGit agent governance and Sweepr reclamation, with StateLayer internal preview and local-only Handroll Rehab. Do not market all components as public paid features.
-- [Suite webpage](https://unloopr.com/suite): the website route will be verified after its release; current production status remains https://unloopr.com/status.
+- [Live suite webpage](https://unloopr.com/suite): verified HTTP 200 on November 10, 2026 with canonical URL and sitemap. It describes Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab without asserting all are publicly purchasable. For updated availability see https://unloopr.com/status.
 
 ## AI coding agents and authenticated MCP
 - MCP endpoint: `https://mcp.unloopr.com/mcp` (authenticated HTTP POST; 401 challenge expected without a token)
@@ -104,11 +104,15 @@ _Verified source capabilities: November 10, 2026. Not all components are public 
 
 **Do not interpret the sequence as a live one-click workflow.** Each component has separate access, prerequisites, authorization, and proof boundaries.
 
-The planned website overview is https://unloopr.com/suite. Use https://unloopr.com/status for actual live availability, and https://unloopr.com/support for help. Founder and Pro checkout remain unavailable while billing verification is incomplete; the ChatGPT directory listing has not been independently confirmed.
+The suite overview is live at https://unloopr.com/suite (verified November 10, 2026, HTTP 200, canonical and sitemap published). Use https://unloopr.com/status for actual live availability, and https://unloopr.com/support for help. Founder and Pro checkout remain unavailable while billing verification is incomplete; the ChatGPT directory listing has not been independently confirmed.
 
 ## Source provenance
 
 Descriptions are derived from first-party source and README contracts in `jabbertones-cloud/unloopr/overwrite_guard`, `jabbertones-cloud/agentgit`, and `jabbertones-cloud/StateLayer`. Sweepr is an AgentGit subcommand rather than an independent `jabbertones-cloud/sweepr` repo. Handroll Rehab's local-only boundary is documented in `unloopr-agent/docs/handroll-rehab-swift.md`. Product claims are intentionally narrower than internal architecture ambitions.
+
+## Verified website release
+
+On November 10, 2026, the Unloopr website was deployed at exact GitHub main commit `9e457961123bde3b3998e21a4736282ef9b9ef28`, Cloudflare Worker `unloopr-com` version `1a6a77e6-6b69-436b-8d76-bc7b83edacbd` at 100% production traffic. Public `/suite`, `/status`, `/support`, `/scan`, `/sitemap.xml` and `/llms.txt` returned HTTP 200. The conventional favicon URL also returned HTTP 200 using the original approved PNG asset. Founder and Pro checkout remained 503; the existing MCP OAuth issuer was unchanged. These are release observations, not evidence of a ChatGPT directory approval or paid-plan availability.
 
 ---
 

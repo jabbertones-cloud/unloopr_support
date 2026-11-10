@@ -10,6 +10,10 @@
 - [FAQ](docs/faq/faq.md), [getting started](docs/getting-started.md), [pricing/status](docs/pricing.md), [security](docs/security.md)
 - [Editor and MCP setup](docs/ide-setup.md): OAuth-aware client integration, expected 401, and connection troubleshooting
 
+## The engineering suite
+- [Suite capabilities and status](docs/suite.md): Unloopr diagnosis, Overwrite Guard regression behavior bank (opt-in local/CI), AgentGit agent governance and Sweepr reclamation, with StateLayer internal preview and local-only Handroll Rehab. Do not market all components as public paid features.
+- [Suite webpage](https://unloopr.com/suite): the website route will be verified after its release; current production status remains https://unloopr.com/status.
+
 ## AI coding agents and authenticated MCP
 - MCP endpoint: `https://mcp.unloopr.com/mcp` (authenticated HTTP POST; 401 challenge expected without a token)
 - OAuth issuer as advertised by metadata: `https://unloopr-mcp.smatdesigns.workers.dev` (do not rewrite issuer)

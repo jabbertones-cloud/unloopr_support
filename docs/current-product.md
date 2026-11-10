@@ -6,6 +6,10 @@ _Last verified: November 10, 2026. This is a public product-status reference, no
 
 Unloopr is a code coach for people building apps with AI tools. It checks selected code for known errors and security mistakes, such as unsupported imports or secret-shaped values, and returns findings with explanations. A scan can legitimately return no findings. Unloopr is advisory: you must review and test changes before shipping.
 
+## What else is in the engineering suite?
+
+See [the suite map](suite.md) for Overwrite Guard (opt-in local/CI regression replay), AgentGit (agent task and evidence control), Sweepr (safe AgentGit worktree reclamation), StateLayer (internal proof-of-release preview) and Handroll Rehab (local read-only review candidates). These are not all purchasable or publicly hosted products.
+
 ## Can I scan a GitHub repository for free?
 
 Yes, **public repositories** can be submitted at https://unloopr.com/scan using a `https://github.com/owner/repo` URL. No GitHub account or credit card is needed for this website route. The website currently advertises **up to three public repository scans per day**. It shows a limited set of findings, not an unlimited audit.

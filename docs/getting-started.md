@@ -1,74 +1,28 @@
 # Getting started with Unloopr
 
-> Last updated: 2026-10-11
+_Last checked: November 10, 2026._
 
-Connect your first repo and get your 3 free fixes in about 5 minutes.
+## Scan a public GitHub repository
 
----
+1. Open [unloopr.com/scan](https://unloopr.com/scan).
+2. Paste a public repository URL, for example `https://github.com/githubtraining/hellogitworld`.
+3. Run the free scan and read the returned findings. If there are none, it means no covered rules were triggered in that run, not that the repository is guaranteed bug-free.
+4. Open a finding to understand what may be wrong, why it matters, and what to verify after a change.
 
-## What you need
+The public website scan does **not** need a GitHub login or payment card. It currently allows up to three public repo scans per day and can return fewer than three findings. Private repository scans are **not** offered through this URL.
 
-- A GitHub account
-- A repository with code in it (any language — yours, or one your AI built for you)
+## Scan pasted code
 
-That's it. No credit card. No install.
+On [Unloopr's homepage](https://unloopr.com/), choose **Paste your broken code**, pick a language if needed, then scan. Remove passwords, access tokens, customer information, and confidential code first. You are responsible for reviewing and testing any suggested fix.
 
----
+## Connect GitHub or an AI agent
 
-## Step 1: Connect your repo
+You can [install the GitHub App](https://github.com/apps/unloopr-code-coach/installations/new) and select repositories. Review permissions before authorizing. The installation is not the same as an automatic code-fix service.
 
-1. Go to [unloopr.com](https://unloopr.com) and click **Scan free**.
-2. Sign in with GitHub when asked. Unloopr asks for read-only access — it can read your code, it can't change it.
-3. Pick the repo you want scanned.
+An MCP-capable coding client may connect using `https://mcp.unloopr.com/mcp` and OAuth discovery. The authorization issuer remains the existing workers.dev endpoint. A plain browser GET to `/mcp` is not an MCP client connection test.
 
-**Stuck on this step?** If GitHub asks about permissions and you're unsure — read-only means Unloopr looks but never touches. Your code stays yours.
+Unloopr's publication in the ChatGPT directory has **not been independently confirmed**. Do not assume it can be found in the app directory until its listing is verified.
 
----
+## Plans and help
 
-## Step 2: Read your 3 fixes
-
-The scan takes a minute or two. Then you see your **3 biggest fixes** — the three issues most likely to bite you, ranked by how much they matter.
-
-Each fix shows you three things:
-
-1. **What's wrong** — in plain words, not jargon.
-2. **Why it matters** — what breaks if you ignore it.
-3. **How to fix it** — the exact change, with a breakdown so you learn the pattern.
-
-Example: instead of "timing-unsafe comparison on secret material," you'll read "This login check can leak your users' passwords to an attacker measuring response times. Here's the safe way to compare secrets."
-
----
-
-## Step 3: Make it stick
-
-Under each fix is a short game plan — 60 seconds, plain words. This is the part that breaks the loop: next time your AI writes the same bug, you'll catch it yourself. Let's fix this together.
-
----
-
-## What happens after the 3 fixes?
-
-The free scan shows the top 3. If your repo has more issues (most do), the full report lists all of them. See [Pricing](pricing.md) — Founder is $9/mo, locked forever for the first 500.
-
----
-
-## Common first-scan questions
-
-**How long does a scan take?**
-Usually 1–3 minutes depending on repo size. Very large repos take longer — we'll tell you before you wait.
-
-**My repo is private. Is that okay?**
-Yes. Private repos work the same. See [Security](security.md) — your code is never shared or used for training.
-
-**I don't understand my fixes. Now what?**
-That's normal — it means your coach is doing its job. Read the game plan under each fix. If you're still stuck, open an **"I'm stuck"** issue and paste the fix title. We'll explain it differently.
-
-**Can I scan someone else's repo?**
-You can scan any public repo. For private repos, you need access to them on GitHub.
-
----
-
-## Related articles
-
-- [FAQ](faq/faq.md) — panic questions, answered
-- [Pricing](pricing.md) — what each tier gets you
-- [Security](security.md) — what we read and what we never share
+Free web scans work without checkout. [Founder and Pro checkout is not open yet](pricing.md). If a connection or scan fails, see [troubleshooting](troubleshooting.md) or [private support](https://unloopr.com/support). For technical reports without secrets, use the [public issue form](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose).

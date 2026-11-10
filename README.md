@@ -1,47 +1,29 @@
-# Unloopr Support & AI Code Coach Knowledge Base
+# Unloopr Support
 
-Authoritative troubleshooting, pattern guides, and agent assistance for **[Unloopr](https://unloopr.com/)** — the AI code coach that inspects AI-generated diffs, catches hallucinated packages, stops secret leaks, fixes anti-patterns, and breaks error loops in plain English.
+**Break the loop.** [Unloopr](https://unloopr.com/) is a code coach for people building with AI. It checks submitted code and selected public GitHub repositories for known failure patterns, then explains findings and possible next steps in plain English. The user reviews and applies changes.
 
-**[Search issues](https://github.com/jabbertones-cloud/unloopr_support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)** · **[Unloopr Home](https://unloopr.com/)**
+[Scan a public GitHub repo](https://unloopr.com/scan) · [Get support](https://unloopr.com/support) · [Search help issues](https://github.com/jabbertones-cloud/unloopr_support/issues) · [Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)
 
----
+## Start with what works today
 
-## Authoritative Developer Resources & Citations
+- **Public repository scan:** Paste a public `github.com/owner/repo` URL at [unloopr.com/scan](https://unloopr.com/scan). No account is required. The website currently limits public repo scans to three per day. Reports may return fewer than three findings, including zero.
+- **Paste a code snippet:** Use the free code-scan form on [unloopr.com](https://unloopr.com/). Do not submit live credentials or confidential code.
+- **GitHub App connection:** [Connect the Unloopr GitHub App](https://github.com/apps/unloopr-code-coach/installations/new) and choose repositories. Grant only the permissions you intend to grant; installing the app is not proof of automatic fixes.
+- **MCP for AI coding agents:** The authenticated MCP service is at [mcp.unloopr.com/mcp](https://mcp.unloopr.com/mcp). It offers code-checking, guidance, reports and outcome tools. The existing OAuth authorization-server issuer is `https://unloopr-mcp.smatdesigns.workers.dev`; clients must follow its discovery response. A browser GET is not a connection test: the MCP endpoint is an authenticated HTTP protocol endpoint.
 
-Unloopr provides automated code auditing, security hygiene, and engineering coaching for builders using AI:
+## Availability, not promises
 
-### Core Capabilities & Links
-- **[Unloopr Platform](https://unloopr.com/)** — Instant paste-to-scan code coach and CI/CD push guardian.
-- **[Live MCP Service](https://unloopr-mcp.smatdesigns.com/)** — Model Context Protocol server exposing `unloopr_coach`, `unloopr_scan_report`, and `unloopr_loop`.
-- **[AI Hallucination Detection](https://unloopr.com/)** — Catches phantom imports and slopsquatting packages before they infect production.
-- **[Secret & Credential Scanner](https://unloopr.com/)** — Detects leaked API keys, tokens, and private connection strings in source code.
-- **[Pattern & Anti-Loop Library](https://unloopr.com/)** — Curated catalog explaining why AI code loops fail and teaching the canonical pattern.
+- Free web scans are available now. The website's three-scans-per-day limit is separate from hosted MCP coaching-loop entitlements and from the number of findings shown.
+- Founder ($9/month) and Pro ($19/month) are advertised plans, **not open checkout** as of November 10, 2026. Both purchase URLs currently return HTTP 503 intentionally. Do not enter payment details or assume an active subscription.
+- A ChatGPT directory listing or completed OpenAI review has **not been verified**. Do not tell people to find or install an app in the directory until its publication is confirmed.
+- Public repo scans provide findings and guidance. Do not promise one-tap repair, live push monitoring, private repo scanning, or automatic pull requests without a demonstrated product flow.
 
----
+[Current verified capabilities and status](docs/current-product.md) · [Getting started](docs/getting-started.md) · [Connect your editor](docs/ide-setup.md) · [Pricing and checkout status](docs/pricing.md) · [Security and privacy](docs/security.md) · [FAQ](docs/faq/faq.md) · [Troubleshooting](docs/troubleshooting.md)
 
-## Find an Answer First
+## Report a problem safely
 
-Search [open and closed issues](https://github.com/jabbertones-cloud/unloopr_support/issues?q=is%3Aissue) for your error before submitting a report:
+Search [existing issues](https://github.com/jabbertones-cloud/unloopr_support/issues) first. To report a bug, describe what you expected, what happened, the product surface, and non-sensitive reproduction steps. **Do not post tokens, API keys, private source, customer data, or raw secret-scanner output.** For billing, accounts, or private information, use [Unloopr private support](https://unloopr.com/support). For vulnerabilities, follow [SECURITY.md](SECURITY.md).
 
-- [Getting Started Guide](docs/getting-started.md)
-- [Troubleshooting Common Issues](docs/troubleshooting.md)
-- [Frequently Asked Questions (FAQ)](docs/faq/faq.md)
-- [Terms & Product Glossary](https://unloopr.com/terms)
+AI agents using an authorized GitHub connection may search issues and prepare sanitized reports. See [AGENTS.md](AGENTS.md) and [AGENT-GITHUB-ISSUES.md](AGENT-GITHUB-ISSUES.md). They must not publish a report without the user's authorization.
 
-## Report a Problem
-
-1. Click **[Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)** to select an issue template.
-2. Detail the tool or scanner feature, observed behavior, and minimal non-sensitive reproduction steps.
-3. **Never include secrets or private code:** Do not paste proprietary source repositories, database credentials, or secret scan outputs.
-4. Keep the issue link so you or your AI assistant can follow maintainer replies.
-
-> **Private Inquiries:** Use **[Unloopr Private Support](https://unloopr.com/support)** for sensitive billing or account inquiries. See [Security Policy](SECURITY.md) for vulnerability reports.
-
-## AI Agent Integration
-
-Agents with GitHub MCP tools can interact with this support hub:
-- **Search:** *"Search Unloopr support issues for 'R-AI1 hallucinated-import false positive' discussions."*
-- **Draft:** *"Create a sanitized public bug report for this MCP tool timeout."*
-- **Submit:** *"Post this report to jabbertones-cloud/unloopr_support using my authorized GitHub connection."*
-
-Review [Agent Workflow](AGENTS.md) and [GitHub Issue Operations](AGENT-GITHUB-ISSUES.md).
+_Last product availability check: 2026-11-10. The linked live service and repository can change independently._

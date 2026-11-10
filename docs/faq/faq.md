@@ -1,5 +1,7 @@
 # FAQ — Things people actually ask
 
+For verified features, checkout status, and web/MCP limits, read [Current capabilities](../current-product.md). Older general coding advice below is not a promise that every feature is live.
+
 ## How do I undo my last commit?
 
 Don't panic. If you haven't pushed yet:
@@ -130,7 +132,7 @@ This happens more than you'd think — about 1 in 5 AI-suggested packages aren't
 3. Replace the import with the correct name.
 4. Tell your AI what the right package is so it doesn't do it again.
 
-Unloopr flags these automatically — hallucinated imports are the first thing the harness checks.
+Unloopr can flag some unsupported imports, but no scanner detects every wrong package. Check the real package registry and your dependency manifest before installing anything.
 
 ## The code looks right but doesn't work — what do I do?
 

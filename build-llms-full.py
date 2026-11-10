@@ -9,6 +9,8 @@ SECTIONS = [
     ("# Unloopr Support — Full Documentation", None),
     ("## Product overview", "README.md"),
     ("## Agent instructions", "llms.txt"),
+    ("## Current product status", "docs/current-product.md"),
+    ("## Editor and MCP connection", "docs/ide-setup.md"),
     ("## Getting started", "docs/getting-started.md"),
     ("## FAQ", "docs/faq/faq.md"),
     ("## Troubleshooting index", "docs/troubleshooting.md"),

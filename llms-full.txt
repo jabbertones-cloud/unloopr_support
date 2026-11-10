@@ -9,6 +9,10 @@
 
 [Scan a public GitHub repo](https://unloopr.com/scan) · [Get support](https://unloopr.com/support) · [Search help issues](https://github.com/jabbertones-cloud/unloopr_support/issues) · [Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)
 
+## The engineering suite
+
+[Explore the complete suite](docs/suite.md): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
+
 ## Start with what works today
 
 - **Public repository scan:** Paste a public `github.com/owner/repo` URL at [unloopr.com/scan](https://unloopr.com/scan). No account is required. The website currently limits public repo scans to three per day. Reports may return fewer than three findings, including zero.
@@ -47,6 +51,10 @@ _Last product availability check: 2026-11-10. The linked live service and reposi
 - [FAQ](docs/faq/faq.md), [getting started](docs/getting-started.md), [pricing/status](docs/pricing.md), [security](docs/security.md)
 - [Editor and MCP setup](docs/ide-setup.md): OAuth-aware client integration, expected 401, and connection troubleshooting
 
+## The engineering suite
+- [Suite capabilities and status](docs/suite.md): Unloopr diagnosis, Overwrite Guard regression behavior bank (opt-in local/CI), AgentGit agent governance and Sweepr reclamation, with StateLayer internal preview and local-only Handroll Rehab. Do not market all components as public paid features.
+- [Suite webpage](https://unloopr.com/suite): the website route will be verified after its release; current production status remains https://unloopr.com/status.
+
 ## AI coding agents and authenticated MCP
 - MCP endpoint: `https://mcp.unloopr.com/mcp` (authenticated HTTP POST; 401 challenge expected without a token)
 - OAuth issuer as advertised by metadata: `https://unloopr-mcp.smatdesigns.workers.dev` (do not rewrite issuer)
@@ -70,6 +78,40 @@ _Last product availability check: 2026-11-10. The linked live service and reposi
 
 ---
 
+## Engineering suite
+
+_Verified source capabilities: November 10, 2026. Not all components are public products._
+
+**Find the loop. Prove the fix. Keep the work.** Unloopr is the code-coaching front door of a connected engineering workflow. The supporting components have distinct responsibilities; a standalone repository or local command is not evidence of a live hosted customer feature.
+
+| Component | What it does | Availability |
+| --- | --- | --- |
+| **Unloopr** | Check pasted code and chosen public GitHub repositories for known problems and suggest next steps. Users review and test the fixes. | Free public website scans live at https://unloopr.com/scan; authenticated MCP separate |
+| **Overwrite Guard** | Re-run banked real-use MCP behavior against a changed, isolated Git tree; show field-level differences and block known contradictory changes. | Standalone local/CI utility, opt-in, no automatically installed hook |
+| **AgentGit** | Coordinate agent attempts, fenced leases, workspaces, evidence attestations, and independent reproduction for higher-assurance merge gates. | Engineering component; no verified separate public subscription |
+| **Sweepr** | Review, salvage, and reclaim provably recoverable worktrees/clones using AgentGit's `agentgit reclaim` command. | Integrated into AgentGit; not a separate paid app |
+| **StateLayer** | Answer whether an exact source revision is safely live with evidence freshness, conflict handling and dependency-aware invalidation. | Internal preview, not public SaaS |
+| **Handroll Rehab** | Read-only audit of custom handwritten code, including local Swift/SwiftUI review candidates and native API alternatives. | Local-only, not a hosted automatic rewrite tool |
+
+## How the pieces connect
+
+1. **Diagnose:** Unloopr returns a bounded analysis, not a guarantee of security or complete code correctness.
+2. **Protect:** Where configured by an engineering operator, Overwrite Guard replays trusted observations and identifies regressions against them. A bank covers recorded behavior, not every possible scenario.
+3. **Govern:** AgentGit coordinates authorized agent work and evidence, with independent reproduction for its stronger gate.
+4. **Verify:** StateLayer may provide internal evidence-backed release state; it does not independently deploy a release.
+5. **Recover:** Sweepr can safely reclaim eligible worktrees after a reviewed plan and re-verification.
+6. **Review native alternatives:** Handroll Rehab is a local candidate detector, not automated code replacement.
+
+**Do not interpret the sequence as a live one-click workflow.** Each component has separate access, prerequisites, authorization, and proof boundaries.
+
+The planned website overview is https://unloopr.com/suite. Use https://unloopr.com/status for actual live availability, and https://unloopr.com/support for help. Founder and Pro checkout remain unavailable while billing verification is incomplete; the ChatGPT directory listing has not been independently confirmed.
+
+## Source provenance
+
+Descriptions are derived from first-party source and README contracts in `jabbertones-cloud/unloopr/overwrite_guard`, `jabbertones-cloud/agentgit`, and `jabbertones-cloud/StateLayer`. Sweepr is an AgentGit subcommand rather than an independent `jabbertones-cloud/sweepr` repo. Handroll Rehab's local-only boundary is documented in `unloopr-agent/docs/handroll-rehab-swift.md`. Product claims are intentionally narrower than internal architecture ambitions.
+
+---
+
 ## Current product status
 
 _Last verified: November 10, 2026. This is a public product-status reference, not a promise of future features._
@@ -77,6 +119,10 @@ _Last verified: November 10, 2026. This is a public product-status reference, no
 ## What is Unloopr?
 
 Unloopr is a code coach for people building apps with AI tools. It checks selected code for known errors and security mistakes, such as unsupported imports or secret-shaped values, and returns findings with explanations. A scan can legitimately return no findings. Unloopr is advisory: you must review and test changes before shipping.
+
+## What else is in the engineering suite?
+
+See [the suite map](suite.md) for Overwrite Guard (opt-in local/CI regression replay), AgentGit (agent task and evidence control), Sweepr (safe AgentGit worktree reclamation), StateLayer (internal proof-of-release preview) and Handroll Rehab (local read-only review candidates). These are not all purchasable or publicly hosted products.
 
 ## Can I scan a GitHub repository for free?
 

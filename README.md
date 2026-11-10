@@ -4,6 +4,10 @@
 
 [Scan a public GitHub repo](https://unloopr.com/scan) · [Get support](https://unloopr.com/support) · [Search help issues](https://github.com/jabbertones-cloud/unloopr_support/issues) · [Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)
 
+## The engineering suite
+
+[Explore the complete suite](docs/suite.md): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
+
 ## Start with what works today
 
 - **Public repository scan:** Paste a public `github.com/owner/repo` URL at [unloopr.com/scan](https://unloopr.com/scan). No account is required. The website currently limits public repo scans to three per day. Reports may return fewer than three findings, including zero.

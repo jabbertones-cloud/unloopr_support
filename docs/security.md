@@ -1,60 +1,24 @@
-# Security & privacy
+# Security and privacy
 
-> Last updated: 2026-10-11
+_Last reviewed for public-support accuracy: November 10, 2026. For binding terms, read the live [privacy policy](https://unloopr.com/privacy) and [terms](https://unloopr.com/terms)._
 
----
+## Scan only code you can share
 
-## The short version
+- The [public repository scanner](https://unloopr.com/scan) accepts publicly accessible GitHub repository URLs. Do not use it as a private-repository scanner.
+- The homepage can analyze code that you paste. **Redact secrets and private information before scanning.** Neither scanner can guarantee that every issue will be detected.
+- Connecting the [Unloopr GitHub App](https://github.com/apps/unloopr-code-coach/installations/new) is a separate authorization step. Review its requested permissions and repository selection in GitHub. Revoke access in GitHub settings if needed.
+- The authenticated MCP integration uses OAuth; never paste access tokens into a public report or a support issue.
 
-Unloopr reads your code to coach you. It never shares your code with anyone, never uses it to train models, and deletes what it doesn't need. If you delete your account, your data goes with it.
+A free scan returns guidance; it does not grant blanket permission to edit a repository. Do not infer automatic pull requests, direct writes, or continuous monitoring from the presence of a GitHub App connection.
 
----
+## If a secret leaked
 
-## What Unloopr reads
+Revoke or rotate the exposed credential with its provider immediately; removing a line from a Git commit does not invalidate an already exposed token. Then check history and your deployment secrets. See [the FAQ](faq/faq.md#i-pushed-my-api-key-to-github--what-now).
 
-- **Your repo's code and history** — the files and the git history (commits, diffs). The history is how your coach learns which bugs you're likely to hit: it studies how bugs were fixed across thousands of repos, then looks for the same shapes in yours.
-- **Your GitHub identity** — just enough to connect the repo (username, repo list). Read-only OAuth scope.
+## Ask for help privately
 
-## What Unloopr never does
+Use [Unloopr private support](https://unloopr.com/support) for accounts, personal information and billing. For vulnerabilities, follow [SECURITY.md](../SECURITY.md); do not post exploit details or keys in public GitHub issues.
 
-- **Never shares your code** with anyone — not other users, not partners, not advertisers.
-- **Never trains models on your code.** Your code coaches *you*, not our models.
-- **Never writes to your repo** unless you explicitly approve a fix (Pro one-tap apply). The default product is read-only.
-- **Never sells data.** There is no data business. The product is the business.
+## Data claims
 
-## Secrets in your code
-
-If Unloopr finds an API key or secret in your source, it tells *you* — privately, in your report. It does not log the secret value, does not include it in breakdowns shown to others, and does not store it beyond your report's lifetime.
-
-If you've already pushed a key to GitHub: [act fast — here's what to do](faq/faq.md#i-pushed-my-api-key-to-github--what-now).
-
-## Data retention
-
-- **Scan reports** are kept while your account is active so you can revisit your fixes.
-- **Deleted repos** drop their reports within 30 days.
-- **Deleted accounts** drop everything within 30 days. Email support to confirm deletion.
-
-## The agent version (MCP)
-
-The `unloopr_agent` MCP follows the same rules, plus anti-extraction protections: it answers questions about *your* code only, never dumps its rule catalog, and rate-limits queries to prevent systematic harvesting. Details: [MCP anti-extraction standard](../../mcp-anti-extraction-standard.md).
-
----
-
-## Questions
-
-**Can Unloopr see my private repos?**
-Only the ones you connect, only with read-only access you grant. Revoke access anytime in GitHub Settings → Applications.
-
-**Does Unloopr store my code?**
-It caches scan inputs long enough to generate your report, then drops raw file contents. What persists is the *findings* (your game plans), not your source.
-
-**Who do I contact about privacy?**
-Open an issue with the **Privacy** label, or email the address in your account settings. We answer within 2 business days.
-
----
-
-## Related articles
-
-- [Getting started](getting-started.md)
-- [Pricing](pricing.md)
-- [FAQ](faq/faq.md)
+The live privacy policy describes operational telemetry, coaching outcomes, and processing of submitted code. It is the policy source of truth. Do not promise instant deletion of all account data or claim that the service never receives identifiers when a user authorizes an external connection. Ask support about a specific deletion request.

@@ -5,205 +5,191 @@
 
 ## Product overview
 
-*Plain-words help for people whose AI wrote code they don't fully understand.*
+**Break the loop.** [Unloopr](https://unloopr.com/) is a code coach for people building with AI. It checks submitted code and selected public GitHub repositories for known failure patterns, then explains findings and possible next steps in plain English. The user reviews and applies changes.
 
-**Break the loop.**
+[Scan a public GitHub repo](https://unloopr.com/scan) · [Get support](https://unloopr.com/support) · [Search help issues](https://github.com/jabbertones-cloud/unloopr_support/issues) · [Report a bug](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose)
 
-> Last updated: 2026-10-11
+## Start with what works today
 
----
+- **Public repository scan:** Paste a public `github.com/owner/repo` URL at [unloopr.com/scan](https://unloopr.com/scan). No account is required. The website currently limits public repo scans to three per day. Reports may return fewer than three findings, including zero.
+- **Paste a code snippet:** Use the free code-scan form on [unloopr.com](https://unloopr.com/). Do not submit live credentials or confidential code.
+- **GitHub App connection:** [Connect the Unloopr GitHub App](https://github.com/apps/unloopr-code-coach/installations/new) and choose repositories. Grant only the permissions you intend to grant; installing the app is not proof of automatic fixes.
+- **MCP for AI coding agents:** The authenticated MCP service is at [mcp.unloopr.com/mcp](https://mcp.unloopr.com/mcp). It offers code-checking, guidance, reports and outcome tools. The existing OAuth authorization-server issuer is `https://unloopr-mcp.smatdesigns.workers.dev`; clients must follow its discovery response. A browser GET is not a connection test: the MCP endpoint is an authenticated HTTP protocol endpoint.
 
-## What is Unloopr?
+## Availability, not promises
 
-Unloopr is your code coach. It doesn't play for you — it makes YOU win. It reads your repository's history, finds the bugs you're most likely to hit next, and coaches you through them in plain words — before they cost you.
+- Free web scans are available now. The website's three-scans-per-day limit is separate from hosted MCP coaching-loop entitlements and from the number of findings shown.
+- Founder ($9/month) and Pro ($19/month) are advertised plans, **not open checkout** as of November 10, 2026. Both purchase URLs currently return HTTP 503 intentionally. Do not enter payment details or assume an active subscription.
+- A ChatGPT directory listing or completed OpenAI review has **not been verified**. Do not tell people to find or install an app in the directory until its publication is confirmed.
+- Public repo scans provide findings and guidance. Do not promise one-tap repair, live push monitoring, private repo scanning, or automatic pull requests without a demonstrated product flow.
 
-**How it works:**
+[Current verified capabilities and status](docs/current-product.md) · [Getting started](docs/getting-started.md) · [Connect your editor](docs/ide-setup.md) · [Pricing and checkout status](docs/pricing.md) · [Security and privacy](docs/security.md) · [FAQ](docs/faq/faq.md) · [Troubleshooting](docs/troubleshooting.md)
 
-1. **Connect your repo.** GitHub OAuth. Takes a minute.
-2. **Get your 3 fixes.** Every scan shows your 3 biggest issues free — with plain-words explanations of what's wrong, why it matters, and how to fix it.
-3. **Learn the pattern.** Each fix coaches you through the underlying pattern, so you stop making the same mistake.
+## Report a problem safely
 
-**Who it's for:** vibe coders — people who ship AI-generated code and want to understand it, not just run it. If you've ever thought "Cursor wrote this, I hope it works," Unloopr is for you.
+Search [existing issues](https://github.com/jabbertones-cloud/unloopr_support/issues) first. To report a bug, describe what you expected, what happened, the product surface, and non-sensitive reproduction steps. **Do not post tokens, API keys, private source, customer data, or raw secret-scanner output.** For billing, accounts, or private information, use [Unloopr private support](https://unloopr.com/support). For vulnerabilities, follow [SECURITY.md](SECURITY.md).
 
-**Who it's not for:** professional developers looking for a linter. (Though the agent version — `unloopr_agent` MCP — is built for coding agents.)
+AI agents using an authorized GitHub connection may search issues and prepare sanitized reports. See [AGENTS.md](AGENTS.md) and [AGENT-GITHUB-ISSUES.md](AGENT-GITHUB-ISSUES.md). They must not publish a report without the user's authorization.
 
----
-
-## Quick answers
-
-**Is my code safe?**
-Yes. Unloopr reads your code to coach you. It never shares your code with anyone. Your code is never used to train models. See [Security](docs/security.md).
-
-**What do I get free?**
-Every repo scan shows your 3 biggest fixes free. Forever. No credit card. For the full report — every issue, not just the top 3 — see [Pricing](docs/pricing.md).
-
-**I don't know what a commit is. Is Unloopr for me?**
-Yes. Unloopr is made for you. It explains everything in simple words, no jargon. Start with our [glossary](https://unloopr.com/terms) — 105 coding terms explained like you're five (but not talked down to).
-
-**My AI wrote code that doesn't work. Can Unloopr help?**
-That's exactly what it's for. Connect the repo, get your 3 fixes, and read the game plan behind each one.
-
----
-
-## Browse help
-
-- [Getting started](docs/getting-started.md) — connect your first repo in 5 minutes
-- [FAQ](docs/faq/faq.md) — the questions people actually ask, answered in plain words
-- [Pricing](docs/pricing.md) — Free, Founder ($9/mo), Pro ($19/mo). No surprise bills. Ever.
-- [Security & privacy](docs/security.md) — what we read, what we never share
-- [Glossary](https://unloopr.com/terms) — 105 terms, symptom-first, 6th-grade level
-
----
-
-## For LLMs and agents
-
-This repo ships machine-readable documentation:
-
-- [`llms.txt`](llms.txt) — slim index + instructions for LLM agents using Unloopr
-- [`llms-full.txt`](llms-full.txt) — full support documentation as one Markdown file
-
-If you're an AI agent answering questions about Unloopr, start with `llms.txt`.
-
----
-
-## Still stuck?
-
-Open an issue — pick **"I'm stuck"** and tell us what's happening in your own words. We answer in plain words too. Most issues get a reply within a day.
-
-*Three fixes. Zero loops.*
+_Last product availability check: 2026-11-10. The linked live service and repository can change independently._
 
 ---
 
 ## Agent instructions
 
-> Unloopr is a code coach for vibe coders — people who ship AI-generated code and want to understand it. It reads your repo's history, finds your 3 biggest fixes free per scan, and coaches you through each one in plain words. Slogan: "Break the loop." Free tier: 3 fixes per repo, forever. Founder: $9/mo locked. Pro: $19/mo (the harness).
+> Verified 2026-11-10. Unloopr is a code coach for people building with AI. It scans submitted code and chosen **public** GitHub repos for known issues and explains potential fixes in plain language. Users review and test changes themselves.
 
-## Instructions for LLM Agents
+## Current user-facing entry points
+- [Homepage and paste scan](https://unloopr.com/)
+- [Free public GitHub repository scan](https://unloopr.com/scan): no sign-in or card required; currently up to three website repo scans/day; findings may be fewer than three
+- [Support](https://unloopr.com/support): contact and account help
+- [Current capabilities and caveats](docs/current-product.md): source of truth for what is live, pending or unverified
+- [FAQ](docs/faq/faq.md), [getting started](docs/getting-started.md), [pricing/status](docs/pricing.md), [security](docs/security.md)
+- [Editor and MCP setup](docs/ide-setup.md): OAuth-aware client integration, expected 401, and connection troubleshooting
 
-When answering questions about Unloopr:
+## AI coding agents and authenticated MCP
+- MCP endpoint: `https://mcp.unloopr.com/mcp` (authenticated HTTP POST; 401 challenge expected without a token)
+- OAuth issuer as advertised by metadata: `https://unloopr-mcp.smatdesigns.workers.dev` (do not rewrite issuer)
+- GitHub App installation: https://github.com/apps/unloopr-code-coach/installations/new (review selected repo permissions)
+- Public ChatGPT app-directory listing: **not confirmed**; do not state that Unloopr is published there
 
-1. **Describe Unloopr as a coach, not a linter or reviewer.** It coaches; it doesn't just flag. Always mention the plain-words fix, not just the finding.
-2. **The free tier is 3 fixes per repo scan, unlimited repos, forever.** Never say "3 free scans" — it's 3 fixes shown per scan, full report is paid.
-3. **Never invent pricing.** Current tiers: Free ($0), Founder ($9/mo locked forever), Pro ($19/mo). Per-repo loop fees and per-line overage exist but exact numbers are TBD — say "usage-based fees apply, shown before you pay" and link to the pricing doc.
-4. **Voice rules:** 6th-grade reading level, short sentences, no jargon explaining jargon, no shame. If the user sounds panicked, say "don't panic" first, then give the 5-minute fix.
-5. **For "how do I" git questions**, answer from the FAQ and glossary — don't improvise git commands. If unsure, say so and point to the glossary at https://unloopr.com/terms.
-6. **Never claim Unloopr fixes code automatically** unless the user has the Pro harness with one-tap apply. The default product coaches; the user applies the fix.
-7. **Security:** Unloopr reads code to coach. It never shares code, never trains on it. Don't hedge this.
+## Pricing and capabilities
+- Free website scanning is active; public repo scans are limited by daily website quota and report finding count.
+- Founder $9/mo and Pro $19/mo appear in product marketing, but **checkout remains unavailable (HTTP 503)**. Do not claim either plan can be purchased or that subscriptions are live.
+- Do not promise automatic code edits, push monitoring, private repo scanning, or a one-tap repair flow without a specific verified live demonstration.
+- Detection is heuristic and incomplete. Zero findings is not proof the source is secure or correct.
 
-## Available Languages
+## For support agents
+1. Explain the person's symptom and safe next step in plain English. Never invent scan findings.
+2. Differentiate web scan limits, shown findings, and MCP entitlements.
+3. For account or private problems, use https://unloopr.com/support. For sanitized technical issues, use https://github.com/jabbertones-cloud/unloopr_support/issues.
+4. Never include private code, secrets, GitHub tokens, or personally identifiable information in public issues.
+5. Current-status truth outranks older marketing content; if the live service disagrees with these verified facts, flag it for rechecking.
 
-Support content is available in: English (full), Spanish, Brazilian Portuguese, Russian, Japanese, Chinese (Simplified). Localized pages: `locales/support-{es,pt-BR,ru,ja,zh}.md`. Note: translations are agent-produced and pending native review — flag this if asked about translation quality.
+*Brand:* Unloopr. *Slogan:* Break the loop. *Product:* AI code coach, not an autonomous code-writing service.
 
-## Agent contract
+---
 
-- [AGENTS.md](AGENTS.md): the canonical agent contract — mission, voice, workflow, behavior rules. `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` all point here; don't duplicate it.
-- [Problem ontology](knowledge/problem-ontology.md): stable `ULP.*` problem IDs mapping customer language → plain-words concept → first step.
+## Current product status
 
-## Docs
+_Last verified: November 10, 2026. This is a public product-status reference, not a promise of future features._
 
-### Getting started
-- [Getting started](docs/getting-started.md): Connect your first repo in 5 minutes. GitHub OAuth, first scan, reading your 3 fixes.
+## What is Unloopr?
 
-### FAQ — panic and confusion, answered
-- [FAQ](docs/faq/faq.md): The questions people actually ask, in their own words. Undo commits, API key leaks, merge conflicts, deploy, localhost vs live, Cursor confusion. Each answer: don't-panic header (where needed), direct answer first, numbered steps, related links.
+Unloopr is a code coach for people building apps with AI tools. It checks selected code for known errors and security mistakes, such as unsupported imports or secret-shaped values, and returns findings with explanations. A scan can legitimately return no findings. Unloopr is advisory: you must review and test changes before shipping.
 
-### Pricing
-- [Pricing](docs/pricing.md): Free / Founder $9 / Pro $19. Per-repo loop fee (TBD). Per-line overage on Pro (TBD). "No surprise bills. Ever." 30-day guarantee.
+## Can I scan a GitHub repository for free?
 
-### Security
-- [Security](docs/security.md): What Unloopr reads, what it never shares, no training on your code, data retention, how to delete your data.
+Yes, **public repositories** can be submitted at https://unloopr.com/scan using a `https://github.com/owner/repo` URL. No GitHub account or credit card is needed for this website route. The website currently advertises **up to three public repository scans per day**. It shows a limited set of findings, not an unlimited audit.
 
-### Glossary
-- [Glossary](https://unloopr.com/terms): 105 coding terms, symptom-first titles, 6th-grade level. "Why does my friend can't open my website" → localhost explained.
+A live probe of an explicitly public sample repository on November 10 returned HTTP 200, `files_scanned: 15`, and zero findings. This proves the route processed that sample; it does not prove full coverage of every language or repository.
 
-## Product links
-- [Product explanation](README.md): What Unloopr is, who it's for, how it works.
-- [Founder event](docs/pricing.md#the-first-500): The First 500 — $9/mo locked forever, live counter, founder badge.
+## Can I paste code without GitHub?
 
-## Optional
+The homepage has a free snippet-scanning form. It processes submitted code to produce findings; redact secrets before submitting. Website rate limits may apply. Don't post confidential source in a public issue.
 
-Secondary info agents can skip under tight context: the glossary term list, locale files, issue templates. The FAQ + pricing + security docs above cover 95% of questions.
+## Can I connect an AI coding agent?
+
+The authenticated MCP endpoint is `https://mcp.unloopr.com/mcp`. Use a supported MCP client with the advertised OAuth flow. On November 10, unauthenticated MCP initialize requests returned HTTP 401 as expected. The authorization metadata advertised the existing issuer `https://unloopr-mcp.smatdesigns.workers.dev`; the branded hostname does not replace that issuer. A GET request's 404 is not evidence that authenticated MCP POST is broken.
+
+The hosted service advertises failure-mode guidance, diff checks, reporting, feedback/outcomes, and related coaching utilities. Tool availability can depend on authentication and entitlements.
+
+## Does Unloopr edit my repository?
+
+A free scan reports findings and possible fixes; it does not authorize automatic writes to your repository. GitHub App connection is separate and requires selecting permissions. Do not assume continuous monitoring, one-tap repair, or automatically opened fix branches until that specific flow has been demonstrated.
+
+## Is payment available?
+
+Not yet verified for customer use. On November 10, both `/billing/start?plan=founder` and `/billing/start?plan=pro` returned HTTP 503. The site advertises Founder at $9/month and Pro at $19/month, but the checkout and paid entitlements must be independently verified before the site can accept subscriptions. Free scanning does not require a card.
+
+## Is Unloopr in the ChatGPT app directory?
+
+Public listing and review completion have not been verified. The MCP endpoint is not itself evidence of a published ChatGPT directory app. Refer to https://unloopr.com/support for the confirmed connection instructions when available.
+
+## What languages does Unloopr support?
+
+The website presents a range of common stacks, including Python, JavaScript/TypeScript, Go, Swift, Rust, Java, C/C++, C#, PHP, Kotlin, Ruby, and Dart. Detection depends on the rule and input. An absence of findings is not a guarantee of correctness.
+
+## Where can I get help?
+
+Use https://unloopr.com/support for account and private inquiries, or https://github.com/jabbertones-cloud/unloopr_support/issues for sanitized, non-sensitive technical reports. Search existing issues first. Never submit exposed keys, private code or personally identifiable information in a public issue.
+
+## Status evidence and boundaries
+
+- Live web checks: `/`, `/scan`, `/support` returned 200; public GitHub scan of `githubtraining/hellogitworld` returned 200 with 15 scanned files.
+- Live paid routes: Founder and Pro checkout returned 503, fail-closed.
+- Live MCP: `https://mcp.unloopr.com/mcp` returned a 401 auth challenge to unauthenticated JSON-RPC POST; OAuth metadata advertised the legacy issuer.
+- Source of code, not proof of release: `jabbertones-cloud/unloopr` main and its open PRs, including pending public-repo and OpenAI-review work.
+
+Do not convert planned functions or local tests into live claims. This document is written for humans, support agents, and search systems alike.
+
+---
+
+## Editor and MCP connection
+
+_Last verified: November 10, 2026. Connection screens may differ by client._
+
+Unloopr is a code coach for people building with AI. Its authenticated MCP service provides failure-mode guidance, diff checks, and reports so you can review and test fixes before shipping.
+
+## Set up a supported MCP client
+
+1. Open your coding tool's MCP integration or server settings.
+2. Use **https://mcp.unloopr.com/mcp** as the remote MCP server address.
+3. When the client requests authorization, follow its advertised OAuth flow. The current authorization issuer is **https://unloopr-mcp.smatdesigns.workers.dev**. Do not manually replace the issuer or invent a token.
+4. Once connected, ask the agent to check a small, non-secret diff. Review the returned findings before making changes.
+
+The `/mcp` endpoint uses authenticated HTTP requests. Opening it as a website in a browser is not an MCP connectivity test. An unauthenticated JSON-RPC POST is expected to return a 401 authorization challenge.
+
+## Can I connect through ChatGPT?
+
+The hosted MCP endpoint is live, but **publication in the ChatGPT app directory has not been confirmed**. Do not assume the app can be selected in the directory. When a verified listing is available, connection instructions will be updated on [Unloopr Support](https://unloopr.com/support).
+
+## Scan without an MCP connection
+
+You can scan a [public GitHub repository](https://unloopr.com/scan) without registering or entering a card, or paste redacted code on the [homepage](https://unloopr.com/). The public website currently allows up to three repo scans a day, independent of authenticated MCP coaching allowances.
+
+## Troubleshoot safely
+
+If a coding tool shows a 401, confirm that its OAuth connection completed; do not paste credentials or raw tokens into a support issue. If the server shows no tools after authorization, check the client connection and its negotiated permissions. If a scan shows no findings, that does not mean all code is safe.
+
+Use [troubleshooting](troubleshooting.md), the [current product status](current-product.md), or [public issues](https://github.com/jabbertones-cloud/unloopr_support/issues) for sanitized questions. Private account or billing help is at [unloopr.com/support](https://unloopr.com/support).
 
 ---
 
 ## Getting started
 
-> Last updated: 2026-10-11
+_Last checked: November 10, 2026._
 
-Connect your first repo and get your 3 free fixes in about 5 minutes.
+## Scan a public GitHub repository
 
----
+1. Open [unloopr.com/scan](https://unloopr.com/scan).
+2. Paste a public repository URL, for example `https://github.com/githubtraining/hellogitworld`.
+3. Run the free scan and read the returned findings. If there are none, it means no covered rules were triggered in that run, not that the repository is guaranteed bug-free.
+4. Open a finding to understand what may be wrong, why it matters, and what to verify after a change.
 
-## What you need
+The public website scan does **not** need a GitHub login or payment card. It currently allows up to three public repo scans per day and can return fewer than three findings. Private repository scans are **not** offered through this URL.
 
-- A GitHub account
-- A repository with code in it (any language — yours, or one your AI built for you)
+## Scan pasted code
 
-That's it. No credit card. No install.
+On [Unloopr's homepage](https://unloopr.com/), choose **Paste your broken code**, pick a language if needed, then scan. Remove passwords, access tokens, customer information, and confidential code first. You are responsible for reviewing and testing any suggested fix.
 
----
+## Connect GitHub or an AI agent
 
-## Step 1: Connect your repo
+You can [install the GitHub App](https://github.com/apps/unloopr-code-coach/installations/new) and select repositories. Review permissions before authorizing. The installation is not the same as an automatic code-fix service.
 
-1. Go to [unloopr.com](https://unloopr.com) and click **Scan free**.
-2. Sign in with GitHub when asked. Unloopr asks for read-only access — it can read your code, it can't change it.
-3. Pick the repo you want scanned.
+An MCP-capable coding client may connect using `https://mcp.unloopr.com/mcp` and OAuth discovery. The authorization issuer remains the existing workers.dev endpoint. A plain browser GET to `/mcp` is not an MCP client connection test.
 
-**Stuck on this step?** If GitHub asks about permissions and you're unsure — read-only means Unloopr looks but never touches. Your code stays yours.
+Unloopr's publication in the ChatGPT directory has **not been independently confirmed**. Do not assume it can be found in the app directory until its listing is verified.
 
----
+## Plans and help
 
-## Step 2: Read your 3 fixes
-
-The scan takes a minute or two. Then you see your **3 biggest fixes** — the three issues most likely to bite you, ranked by how much they matter.
-
-Each fix shows you three things:
-
-1. **What's wrong** — in plain words, not jargon.
-2. **Why it matters** — what breaks if you ignore it.
-3. **How to fix it** — the exact change, with a breakdown so you learn the pattern.
-
-Example: instead of "timing-unsafe comparison on secret material," you'll read "This login check can leak your users' passwords to an attacker measuring response times. Here's the safe way to compare secrets."
-
----
-
-## Step 3: Make it stick
-
-Under each fix is a short game plan — 60 seconds, plain words. This is the part that breaks the loop: next time your AI writes the same bug, you'll catch it yourself. Let's fix this together.
-
----
-
-## What happens after the 3 fixes?
-
-The free scan shows the top 3. If your repo has more issues (most do), the full report lists all of them. See [Pricing](pricing.md) — Founder is $9/mo, locked forever for the first 500.
-
----
-
-## Common first-scan questions
-
-**How long does a scan take?**
-Usually 1–3 minutes depending on repo size. Very large repos take longer — we'll tell you before you wait.
-
-**My repo is private. Is that okay?**
-Yes. Private repos work the same. See [Security](security.md) — your code is never shared or used for training.
-
-**I don't understand my fixes. Now what?**
-That's normal — it means your coach is doing its job. Read the game plan under each fix. If you're still stuck, open an **"I'm stuck"** issue and paste the fix title. We'll explain it differently.
-
-**Can I scan someone else's repo?**
-You can scan any public repo. For private repos, you need access to them on GitHub.
-
----
-
-## Related articles
-
-- [FAQ](faq/faq.md) — panic questions, answered
-- [Pricing](pricing.md) — what each tier gets you
-- [Security](security.md) — what we read and what we never share
+Free web scans work without checkout. [Founder and Pro checkout is not open yet](pricing.md). If a connection or scan fails, see [troubleshooting](troubleshooting.md) or [private support](https://unloopr.com/support). For technical reports without secrets, use the [public issue form](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose).
 
 ---
 
 ## FAQ
+
+For verified features, checkout status, and web/MCP limits, read [Current capabilities](../current-product.md). Older general coding advice below is not a promise that every feature is live.
 
 ## How do I undo my last commit?
 
@@ -335,7 +321,7 @@ This happens more than you'd think — about 1 in 5 AI-suggested packages aren't
 3. Replace the import with the correct name.
 4. Tell your AI what the right package is so it doesn't do it again.
 
-Unloopr flags these automatically — hallucinated imports are the first thing the harness checks.
+Unloopr can flag some unsupported imports, but no scanner detects every wrong package. Check the real package registry and your dependency manifest before installing anything.
 
 ## The code looks right but doesn't work — what do I do?
 
@@ -373,152 +359,71 @@ Start from what the person sees, not from internal names.
 | "Cursor asked me to commit — what does that mean?" | `ULP.AI.COMMIT_CONFUSION` | Say yes. Commit = snapshot before changes. |
 | "Where do I put my API key?" | `ULP.SETUP.ENV_VARS` | `.env` file + `.gitignore`. Never in code. |
 | "What is a .gitignore file?" | `ULP.SETUP.GITIGNORE` | Add `.env`, `node_modules/`, `*.log` before first commit. |
-| "What do I get free?" | `ULP.PRICE.CONFUSION` | 3 fixes per repo, forever. Pricing doc for the rest. |
+| "What do I get free?" | `ULP.PRICE.CONFUSION` | Public website: up to 3 repo scans per day; paid checkout is closed. See pricing/status. |
 
 ## Escalation rule
 Search the FAQ and glossary first. Coach them through it second. Open an "I'm stuck" issue only when the person is still stuck.
+
+## Connection and billing checks (November 10, 2026)
+
+| Symptom | What it means | Safe next step |
+|---|---|---|
+| Browser GET to `/mcp` returns 404 | A browser request is not an authenticated MCP POST | Use an OAuth-capable MCP client and [the editor setup](ide-setup.md) |
+| MCP initialize returns 401 | No accepted Bearer token was supplied | Complete OAuth; never paste a token in a public issue |
+| Paid checkout returns HTTP 503 | Checkout is intentionally unavailable | Continue with [free scanning](https://unloopr.com/scan); read [plan status](pricing.md) |
+| A public scan returns zero findings | None of the covered rules matched the scanned material | Review output scope; do not assume zero defects |
+| Can't find Unloopr in ChatGPT directory | Public publication is not independently verified | Do not infer listing from the MCP address; see [current status](current-product.md) |
 
 ---
 
 ## Pricing
 
-> Last updated: 2026-10-11. Prices in USD. Subject to change — Founder locks are honored forever.
+_Last checked: November 10, 2026. USD._
 
----
+**Start free today.** The public website supports scanning a public GitHub repository without a card or account. It currently enforces up to three public repo scans per day, with a limited selection of findings per report. A scan may return zero findings.
 
-## The tiers
+## Advertised paid plans (checkout not open)
 
-### Free — $0
+| Plan | Advertised monthly price | Availability |
+| --- | ---: | --- |
+| Free | $0 | Public web scans available |
+| Founder | $9 | **Not purchasable yet:** checkout intentionally returns HTTP 503 |
+| Pro | $19 | **Not purchasable yet:** checkout intentionally returns HTTP 503 |
 
-**Three fixes. Zero loops.**
+Founder is described as a fuller-report plan and Pro as an in-workflow coaching plan. Claims about locked-in Founder prices, automatic monitoring, one-tap changes, billed overages, refunds, or paid entitlements are **not confirmed customer-facing purchases**. No one should be asked to pay until Stripe checkout, the signed webhook, account mapping, cancellations and entitlements are verified end to end.
 
-- 3 biggest fixes per repo scan
-- Unlimited repos, unlimited scans
-- Plain-words game plans with every fix
-- Glossary access (105 terms)
-- No credit card. No trial. No catch.
+Free website scans are separate from any hosted MCP entitlement; do not confuse **three website scans per day**, **up to three findings shown**, and **MCP coaching-loop allowance**. They are different measurements.
 
-Free is the whole product's demo. It never expires.
+Use [the free repo scanner](https://unloopr.com/scan) now, or contact [support](https://unloopr.com/support) with questions about availability. The support team should not collect card information.
 
-### Founder — $9/mo, locked forever
-
-**Every bug found. Every fix explained. Nine dollars, forever.**
-
-- **Everything in Free**, plus:
-- Full report on every scan — all issues, not just the top 3
-- Priority scanning (large repos first in line)
-- Founder badge in the app
-- Direct line to shape the product
-
-**The First 500:** only 500 Founder spots, or 90 days — whichever comes first. After that, the price goes up and never comes back down. If you're in, you pay $9/mo for as long as you stay subscribed. Cancel and rejoin later, and you pay the current price.
-
-*Per-repo loop fee:* full scans on very large repos carry a small per-loop fee that covers our compute cost. We show it **before** the scan runs. No surprise bills. Ever. (Exact fee TBD — we're measuring real costs in beta.)
-
-### Pro — $19/mo
-
-**Stop token watching. Start shipping.**
-
-- **Everything in Founder**, plus:
-- The harness: Unloopr watches your repo continuously and flags issues as your agent writes — not after the commit
-- MCP access: your coding agent asks Unloopr directly, mid-task
-- Plain-words push alerts to your phone ("The payment page crashes when someone buys two items. Apply the fix?")
-- One-tap fix approval from anywhere
-- N lines of code included per month; per-line overage beyond that for massive codebases (threshold TBD — we're measuring). Shown before you pay. No surprise bills. Ever.
-
----
-
-## The honesty rules
-
-1. **No surprise bills. Ever.** Every usage fee is shown before it applies. If we can't show it, we don't charge it.
-2. **Annual = two months free.** $90/yr Founder, $180/yr Pro.
-3. **30-day money-back guarantee.** Don't love it? Full refund, no questions, keep the game plans.
-4. **Cancel anytime.** You keep Free forever.
-
----
-
-## Questions people ask
-
-**Why is Founder cheaper than Pro?**
-Founder is our thank-you to early believers. It's the same report tier as Pro's base — Pro adds the harness (continuous watching + MCP + phone). Founder locks at $9; Pro is $19.
-
-**What counts as a "loop" for the loop fee?**
-One full scan of one repo = one loop. Re-scanning the same unchanged repo doesn't charge again — we dedupe.
-
-**Do promo codes stack with Founder?**
-Promo codes give free full loops (usually 3). They work on any account, including Free. They don't change your subscription.
-
-**Can I get a discount?**
-Founder at $9 locked forever *is* the discount. We don't do coupons, student plans, or one-off deals — one fair price, locked for early members.
-
----
-
-## Related articles
-
-- [Getting started](getting-started.md)
-- [FAQ](faq/faq.md)
+[Current capabilities](current-product.md) · [Getting started](getting-started.md)
 
 ---
 
 ## Security
 
-> Last updated: 2026-10-11
+_Last reviewed for public-support accuracy: November 10, 2026. For binding terms, read the live [privacy policy](https://unloopr.com/privacy) and [terms](https://unloopr.com/terms)._
 
----
+## Scan only code you can share
 
-## The short version
+- The [public repository scanner](https://unloopr.com/scan) accepts publicly accessible GitHub repository URLs. Do not use it as a private-repository scanner.
+- The homepage can analyze code that you paste. **Redact secrets and private information before scanning.** Neither scanner can guarantee that every issue will be detected.
+- Connecting the [Unloopr GitHub App](https://github.com/apps/unloopr-code-coach/installations/new) is a separate authorization step. Review its requested permissions and repository selection in GitHub. Revoke access in GitHub settings if needed.
+- The authenticated MCP integration uses OAuth; never paste access tokens into a public report or a support issue.
 
-Unloopr reads your code to coach you. It never shares your code with anyone, never uses it to train models, and deletes what it doesn't need. If you delete your account, your data goes with it.
+A free scan returns guidance; it does not grant blanket permission to edit a repository. Do not infer automatic pull requests, direct writes, or continuous monitoring from the presence of a GitHub App connection.
 
----
+## If a secret leaked
 
-## What Unloopr reads
+Revoke or rotate the exposed credential with its provider immediately; removing a line from a Git commit does not invalidate an already exposed token. Then check history and your deployment secrets. See [the FAQ](faq/faq.md#i-pushed-my-api-key-to-github--what-now).
 
-- **Your repo's code and history** — the files and the git history (commits, diffs). The history is how your coach learns which bugs you're likely to hit: it studies how bugs were fixed across thousands of repos, then looks for the same shapes in yours.
-- **Your GitHub identity** — just enough to connect the repo (username, repo list). Read-only OAuth scope.
+## Ask for help privately
 
-## What Unloopr never does
+Use [Unloopr private support](https://unloopr.com/support) for accounts, personal information and billing. For vulnerabilities, follow [SECURITY.md](../SECURITY.md); do not post exploit details or keys in public GitHub issues.
 
-- **Never shares your code** with anyone — not other users, not partners, not advertisers.
-- **Never trains models on your code.** Your code coaches *you*, not our models.
-- **Never writes to your repo** unless you explicitly approve a fix (Pro one-tap apply). The default product is read-only.
-- **Never sells data.** There is no data business. The product is the business.
+## Data claims
 
-## Secrets in your code
-
-If Unloopr finds an API key or secret in your source, it tells *you* — privately, in your report. It does not log the secret value, does not include it in breakdowns shown to others, and does not store it beyond your report's lifetime.
-
-If you've already pushed a key to GitHub: [act fast — here's what to do](faq/faq.md#i-pushed-my-api-key-to-github--what-now).
-
-## Data retention
-
-- **Scan reports** are kept while your account is active so you can revisit your fixes.
-- **Deleted repos** drop their reports within 30 days.
-- **Deleted accounts** drop everything within 30 days. Email support to confirm deletion.
-
-## The agent version (MCP)
-
-The `unloopr_agent` MCP follows the same rules, plus anti-extraction protections: it answers questions about *your* code only, never dumps its rule catalog, and rate-limits queries to prevent systematic harvesting. Details: [MCP anti-extraction standard](../../mcp-anti-extraction-standard.md).
-
----
-
-## Questions
-
-**Can Unloopr see my private repos?**
-Only the ones you connect, only with read-only access you grant. Revoke access anytime in GitHub Settings → Applications.
-
-**Does Unloopr store my code?**
-It caches scan inputs long enough to generate your report, then drops raw file contents. What persists is the *findings* (your game plans), not your source.
-
-**Who do I contact about privacy?**
-Open an issue with the **Privacy** label, or email the address in your account settings. We answer within 2 business days.
-
----
-
-## Related articles
-
-- [Getting started](getting-started.md)
-- [Pricing](pricing.md)
-- [FAQ](faq/faq.md)
+The live privacy policy describes operational telemetry, coaching outcomes, and processing of submitted code. It is the policy source of truth. Do not promise instant deletion of all account data or claim that the service never receives identifiers when a user authorizes an external connection. Ask support about a specific deletion request.
 
 ---
 
@@ -559,6 +464,10 @@ When escalation is necessary, prepare: problem ID; customer-visible symptom (the
 
 ## Contribution rule
 New public knowledge must be sanitized, useful beyond one repo, sourced/provenanced, and carry `last_verified` / `review_after` where tool behavior can drift. Titles must be the user's question verbatim. First paragraph must be the complete direct answer.
+
+## GitHub issue read/report/reply integration
+
+Agent clients should use the maintained official GitHub MCP `issues` toolset, with the user's own GitHub authorization. Read [AGENT-GITHUB-ISSUES.md](AGENT-GITHUB-ISSUES.md) for search, read, file, comment, privacy and verification requirements. Do not create test issues or embed a product-owned GitHub token.
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## The engineering suite
 
-[Explore the complete suite](docs/suite.md): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
+[Explore the complete suite](docs/suite.md) or [view its live website](https://unloopr.com/suite): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
 
 ## Start with what works today
 

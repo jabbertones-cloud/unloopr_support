@@ -24,8 +24,12 @@ _Verified source capabilities: November 10, 2026. Not all components are public 
 
 **Do not interpret the sequence as a live one-click workflow.** Each component has separate access, prerequisites, authorization, and proof boundaries.
 
-The planned website overview is https://unloopr.com/suite. Use https://unloopr.com/status for actual live availability, and https://unloopr.com/support for help. Founder and Pro checkout remain unavailable while billing verification is incomplete; the ChatGPT directory listing has not been independently confirmed.
+The suite overview is live at https://unloopr.com/suite (verified November 10, 2026, HTTP 200, canonical and sitemap published). Use https://unloopr.com/status for actual live availability, and https://unloopr.com/support for help. Founder and Pro checkout remain unavailable while billing verification is incomplete; the ChatGPT directory listing has not been independently confirmed.
 
 ## Source provenance
 
 Descriptions are derived from first-party source and README contracts in `jabbertones-cloud/unloopr/overwrite_guard`, `jabbertones-cloud/agentgit`, and `jabbertones-cloud/StateLayer`. Sweepr is an AgentGit subcommand rather than an independent `jabbertones-cloud/sweepr` repo. Handroll Rehab's local-only boundary is documented in `unloopr-agent/docs/handroll-rehab-swift.md`. Product claims are intentionally narrower than internal architecture ambitions.
+
+## Verified website release
+
+On November 10, 2026, the Unloopr website was deployed at exact GitHub main commit `9e457961123bde3b3998e21a4736282ef9b9ef28`, Cloudflare Worker `unloopr-com` version `1a6a77e6-6b69-436b-8d76-bc7b83edacbd` at 100% production traffic. Public `/suite`, `/status`, `/support`, `/scan`, `/sitemap.xml` and `/llms.txt` returned HTTP 200. The conventional favicon URL also returned HTTP 200 using the original approved PNG asset. Founder and Pro checkout remained 503; the existing MCP OAuth issuer was unchanged. These are release observations, not evidence of a ChatGPT directory approval or paid-plan availability.

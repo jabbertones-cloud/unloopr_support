@@ -6,6 +6,24 @@ body:
     attributes:
       value: |
         Search existing open and closed issues first. This issue is public. Do not include secrets, customer records, private source code or personal data.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part of Unloopr?
+      description: Choose the actual tool you use. Most engineering roles are not public hosted services. Leave as Other / not sure if unsure.
+      options:
+        - Free website scan
+        - Authenticated MCP client
+        - GitHub App
+        - Handroll Rehab (local audit)
+        - Lego Builder (research-first engineering)
+        - Overwrite Guard (opt-in local / CI)
+        - AgentGit (engineering)
+        - StateLayer (internal preview)
+        - Sweepr (inside AgentGit)
+        - Other / not sure
+    validations:
+      required: false
   - type: textarea
     id: need
     attributes:

@@ -2,6 +2,19 @@
 
 For verified features, checkout status, and web/MCP limits, read [Current capabilities](../current-product.md). Older general coding advice below is not a promise that every feature is live.
 
+## Is the full Unloopr engineering suite available on the website?
+
+**No.** The [suite page](../suite.md) describes seven different roles: Unloopr, Handroll Rehab, Lego Builder, Overwrite Guard, AgentGit, StateLayer and Sweepr. The **free Unloopr scanner** is the only public self-service web scanner. The other roles are local, integrated or internal; the page does not install them or sell access to them.
+
+## Can Lego Builder automatically rewrite or deploy my project?
+
+**No.** Lego Builder is a research-first engineering workflow. It helps evaluate proven source, licenses, tests and provenance before a developer approves an integration. It is **not** a hosted autonomous code writer. For product availability, see [the latest verified suite status](../suite.md).
+
+## Are Founder and Pro subscriptions live?
+
+**No.** The November 17, 2026 live check found both paid checkout routes returning HTTP 503. You can [try the free scan](https://unloopr.com/scan) now. Do not enter credit card details into an unofficial link.
+
+
 ## How do I undo my last commit?
 
 Don't panic. If you haven't pushed yet:

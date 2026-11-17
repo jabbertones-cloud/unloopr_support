@@ -1,35 +1,49 @@
 # Unloopr engineering suite
 
-_Verified source capabilities: November 10, 2026. Not all components are public products._
+_Last verified: November 17, 2026. This is a map of separate engineering capabilities, **not** a claim that seven public products are available._
 
-**Find the loop. Prove the fix. Keep the work.** Unloopr is the code-coaching front door of a connected engineering workflow. The supporting components have distinct responsibilities; a standalone repository or local command is not evidence of a live hosted customer feature.
+**Find the failure. Prove the fix. Keep the work.** Start with [Unloopr's free scanner](https://unloopr.com/scan) or the [live seven-role suite overview](https://unloopr.com/suite). The rest of the workflow has separate local, integrated or internal access. It is not a one-click service and should not be marketed as one.
 
-| Component | What it does | Availability |
-| --- | --- | --- |
-| **Unloopr** | Check pasted code and chosen public GitHub repositories for known problems and suggest next steps. Users review and test the fixes. | Free public website scans live at https://unloopr.com/scan; authenticated MCP separate |
-| **Overwrite Guard** | Re-run banked real-use MCP behavior against a changed, isolated Git tree; show field-level differences and block known contradictory changes. | Standalone local/CI utility, opt-in, no automatically installed hook |
-| **AgentGit** | Coordinate agent attempts, fenced leases, workspaces, evidence attestations, and independent reproduction for higher-assurance merge gates. | Engineering component; no verified separate public subscription |
-| **Sweepr** | Review, salvage, and reclaim provably recoverable worktrees/clones using AgentGit's `agentgit reclaim` command. | Integrated into AgentGit; not a separate paid app |
-| **StateLayer** | Answer whether an exact source revision is safely live with evidence freshness, conflict handling and dependency-aware invalidation. | Internal preview, not public SaaS |
-| **Handroll Rehab** | Read-only audit of custom handwritten code, including local Swift/SwiftUI review candidates and native API alternatives. | Local-only, not a hosted automatic rewrite tool |
+## The seven roles
 
-## How the pieces connect
+| Step | Component | What it actually does | Current availability |
+| --- | --- | --- | --- |
+| 01 / Diagnose | **Unloopr** | Check selected pasted code and public GitHub repositories for covered patterns; explain findings that a person must verify. | **Public free website scanner** at [unloopr.com/scan](https://unloopr.com/scan); authenticated MCP separately |
+| 02 / Review | **Handroll Rehab** | Flag handwritten code that may merit a maintained library or native API. A finding is a review candidate, not proof of a defect. | **Local-only, read-only** audit; no hosted automatic rewrite |
+| 03 / Reuse | **Lego Builder** | Research donor implementations, licenses, tests and provenance before assembling a minimal, evidence-backed integration. | **Research-first engineering workflow**, not a hosted code writer or a public checkout |
+| 04 / Protect | **Overwrite Guard** | Replay banked real-use MCP observations, inspect field-level differences and block known contradictions. | **Standalone opt-in local/CI gate**; no automatically installed hooks |
+| 05 / Govern | **AgentGit** | Fence agent attempts and workspaces, retain evidence and require independent reproduction at stronger gates. | **Engineering component**; no separate public web signup |
+| 06 / Verify | **StateLayer** | Track release evidence with freshness and dependency invalidation, including an explicit UNKNOWN when proof is missing. | **Internal preview**, not a sold service |
+| 07 / Reclaim | **Sweepr** | Plan, salvage, verify and reclaim eligible agent worktrees and clones using `agentgit reclaim`. | **Integrated into AgentGit**; no separate subscription |
 
-1. **Diagnose:** Unloopr returns a bounded analysis, not a guarantee of security or complete code correctness.
-2. **Protect:** Where configured by an engineering operator, Overwrite Guard replays trusted observations and identifies regressions against them. A bank covers recorded behavior, not every possible scenario.
-3. **Govern:** AgentGit coordinates authorized agent work and evidence, with independent reproduction for its stronger gate.
-4. **Verify:** StateLayer may provide internal evidence-backed release state; it does not independently deploy a release.
-5. **Recover:** Sweepr can safely reclaim eligible worktrees after a reviewed plan and re-verification.
-6. **Review native alternatives:** Handroll Rehab is a local candidate detector, not automated code replacement.
+Only **Unloopr** is a public, self-service web scanner today. The component descriptions above are narrower than the team's internal engineering ambitions.
 
-**Do not interpret the sequence as a live one-click workflow.** Each component has separate access, prerequisites, authorization, and proof boundaries.
+## How the workflow fits together
 
-The suite overview is live at https://unloopr.com/suite (verified November 10, 2026, HTTP 200, canonical and sitemap published). Use https://unloopr.com/status for actual live availability, and https://unloopr.com/support for help. Founder and Pro checkout remain unavailable while billing verification is incomplete; the ChatGPT directory listing has not been independently confirmed.
+1. **Diagnose:** Scan with Unloopr. If a local code audit is available, use Handroll Rehab to identify candidate handwritten code worth reviewing.
+2. **Research before rewriting:** Use Lego Builder to find a maintained donor. Check its source, pinned revision, license, tests and compatibility. Do not replace code just because a search returned a candidate.
+3. **Protect:** Use Overwrite Guard **when explicitly configured** to replay the observations that matter. Recorded behavior is not exhaustive.
+4. **Govern and verify:** AgentGit helps isolate the work and preserve independent proof. StateLayer is an internal release-state preview, not a substitute for verifying the live service and source revision.
+5. **Reclaim:** Use Sweepr through AgentGit only after reviewed plans and preservation checks.
 
-## Source provenance
+No step gives agents permission to edit your repository, purchase a subscription, deploy or delete data without its own authorization.
 
-Descriptions are derived from first-party source and README contracts in `jabbertones-cloud/unloopr/overwrite_guard`, `jabbertones-cloud/agentgit`, and `jabbertones-cloud/StateLayer`. Sweepr is an AgentGit subcommand rather than an independent `jabbertones-cloud/sweepr` repo. Handroll Rehab's local-only boundary is documented in `unloopr-agent/docs/handroll-rehab-swift.md`. Product claims are intentionally narrower than internal architecture ambitions.
+## Start here and get help
 
-## Verified website release
+- **Try now:** [Free public GitHub scan](https://unloopr.com/scan) or [paste a code snippet](https://unloopr.com/). Neither guarantees complete bug or security coverage.
+- **Agent connection:** [MCP setup](ide-setup.md). The authenticated MCP endpoint is `https://mcp.unloopr.com/mcp`; follow OAuth discovery rather than substituting the branded host as the issuer.
+- **Availability:** [Current product status](current-product.md) and [live status](https://unloopr.com/status).
+- **Technical report:** [Open a sanitized public issue](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose). Choose the affected component only if you actually use it; otherwise choose “Other / not sure.” Never post private code or keys.
+- **Billing or accounts:** Use [private support](https://unloopr.com/support). Founder ($9/month) and Pro ($19/month) checkout remained **unavailable (HTTP 503)** in the November 17 live check.
 
-On November 10, 2026, the Unloopr website was deployed at exact GitHub main commit `9e457961123bde3b3998e21a4736282ef9b9ef28`, Cloudflare Worker `unloopr-com` version `1a6a77e6-6b69-436b-8d76-bc7b83edacbd` at 100% production traffic. Public `/suite`, `/status`, `/support`, `/scan`, `/sitemap.xml` and `/llms.txt` returned HTTP 200. The conventional favicon URL also returned HTTP 200 using the original approved PNG asset. Founder and Pro checkout remained 503; the existing MCP OAuth issuer was unchanged. These are release observations, not evidence of a ChatGPT directory approval or paid-plan availability.
+## Source and release evidence
+
+The seven-role website update was merged in [Unloopr PR #180](https://github.com/jabbertones-cloud/unloopr/pull/180) and deployed on **November 17, 2026** at exact source commit `a11974cb61e0cd23a6e85745ba05b4a017d2fad2`.
+
+- Cloudflare Worker: `unloopr-com` version `12798e66-480d-4ad1-a019-a4245e8014a3`, **100% traffic**, verified with Cloudflare's deployment listing.
+- Live `/suite`, `/`, `/llms.txt` and `/sitemap.xml`: HTTP 200 and byte-identical to the verified candidate; `/scan` and `/support`: HTTP 200.
+- Protected Founder and Pro checkout routes: HTTP 503; account-billing status: HTTP 503. GitHub OAuth error callback and canonical redirects retained.
+- Source: [the merged Worker site](https://github.com/jabbertones-cloud/unloopr/blob/a11974cb61e0cd23a6e85745ba05b4a017d2fad2/site/worker.js) and the linked evidence in its `.lego/research` folder. The published app-directory status is **not independently verified**.
+- QA: 24 focused site tests passed and the local suite page passed automated Playwright/axe checks at 280, 320, 375, 768 and 1440 px. This does **not** establish human usability, full language coverage or 100% defect detection.
+
+The [November 10 release](https://github.com/jabbertones-cloud/unloopr/blob/9e457961123bde3b3998e21a4736282ef9b9ef28/site/worker.js) was superseded by this November 17 website release. Neither release is evidence that all component workflows are commercially available.

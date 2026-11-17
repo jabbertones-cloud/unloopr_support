@@ -1,6 +1,6 @@
 # Unloopr: official public support facts
 
-> Verified 2026-11-10. Unloopr is a code coach for people building with AI. It scans submitted code and chosen **public** GitHub repos for known issues and explains potential fixes in plain language. Users review and test changes themselves.
+> Website and checkout verified 2026-11-17. Unloopr is a code coach for people building with AI. It scans submitted code and chosen **public** GitHub repos for known issues and explains potential fixes in plain language. Users review and test changes themselves.
 
 ## Current user-facing entry points
 - [Homepage and paste scan](https://unloopr.com/)
@@ -11,8 +11,8 @@
 - [Editor and MCP setup](docs/ide-setup.md): OAuth-aware client integration, expected 401, and connection troubleshooting
 
 ## The engineering suite
-- [Suite capabilities and status](docs/suite.md): Unloopr diagnosis, Overwrite Guard regression behavior bank (opt-in local/CI), AgentGit agent governance and Sweepr reclamation, with StateLayer internal preview and local-only Handroll Rehab. Do not market all components as public paid features.
-- [Live suite webpage](https://unloopr.com/suite): verified HTTP 200 on November 10, 2026 with canonical URL and sitemap. It describes Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab without asserting all are publicly purchasable. For updated availability see https://unloopr.com/status.
+- [Seven-role suite and availability](docs/suite.md): Unloopr public diagnosis; Handroll Rehab local read-only candidate review; Lego Builder research-first donor/provenance workflow; Overwrite Guard opt-in local/CI replay bank; AgentGit work/evidence governance; StateLayer internal preview; Sweepr reclamation via AgentGit. Do not market the seven roles as public paid products.
+- [Live suite webpage](https://unloopr.com/suite): updated and verified HTTP 200 on November 17, 2026; seven roles including Lego Builder, canonical route, and sitemap/llms.txt parity. Merged site commit `a11974cb`, Worker version `12798e66-480d-4ad1-a019-a4245e8014a3` at 100% traffic. Availability at https://unloopr.com/status. Only Unloopr is a free public self-service web scanner.
 
 ## AI coding agents and authenticated MCP
 - MCP endpoint: `https://mcp.unloopr.com/mcp` (authenticated HTTP POST; 401 challenge expected without a token)

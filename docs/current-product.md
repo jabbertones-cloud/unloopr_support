@@ -10,6 +10,10 @@ Unloopr is a code coach for people building apps with AI tools. It checks select
 
 See [the seven-role suite map](suite.md) for **Unloopr**, **Handroll Rehab** (local read-only candidate detection), **Lego Builder** (research-first donor selection and source-provenance checks), **Overwrite Guard** (opt-in local/CI regression replay), **AgentGit** (agent work and evidence controls), **StateLayer** (internal release-state preview) and **Sweepr** (safe reclaim through `agentgit reclaim`). Only the free Unloopr scanner is public self-service today. The other engineering tools are **not** a bundled public service, one-click repair flow or seven separate paid products.
 
+## User consent for promotional or testimonial tools
+
+A November 17 code update merged safeguards requiring explicit user initiation for promotional and testimonial MCP operations. A routine scan, support question or GitHub App connection must not be treated as consent to generate, send, or publish sales material. The source update has not been independently verified on the deployed MCP service in this support review; the website's free-scan and checkout status remains separately documented below.
+
 ## Can I scan a GitHub repository for free?
 
 Yes, **public repositories** can be submitted at https://unloopr.com/scan using a `https://github.com/owner/repo` URL. No GitHub account or credit card is needed for this website route. The website currently advertises **up to three public repository scans per day**. It shows a limited set of findings, not an unlimited audit.

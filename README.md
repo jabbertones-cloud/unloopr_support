@@ -6,7 +6,7 @@
 
 ## The engineering suite
 
-[Explore the complete suite](docs/suite.md) or [view its live website](https://unloopr.com/suite): Unloopr, Overwrite Guard, AgentGit, Sweepr, StateLayer and Handroll Rehab. Overwrite Guard is an opt-in local/CI behavior-replay gate, not the free website scanner. Sweepr is part of AgentGit; StateLayer and Handroll Rehab remain internal/local.
+[Explore all seven roles](docs/suite.md) or [view the live suite](https://unloopr.com/suite): **Unloopr, Handroll Rehab, Lego Builder, Overwrite Guard, AgentGit, StateLayer and Sweepr**. The only public self-service web scanner is Unloopr. Lego Builder researches proven code for local engineering work; Overwrite Guard is an opt-in behavior-replay gate, not a scan feature. Sweepr is part of AgentGit. Handroll Rehab is local-only, and StateLayer is an internal preview. **These are not seven publicly available subscriptions.**
 
 ## Start with what works today
 
@@ -18,7 +18,7 @@
 ## Availability, not promises
 
 - Free web scans are available now. The website's three-scans-per-day limit is separate from hosted MCP coaching-loop entitlements and from the number of findings shown.
-- Founder ($9/month) and Pro ($19/month) are advertised plans, **not open checkout** as of November 10, 2026. Both purchase URLs currently return HTTP 503 intentionally. Do not enter payment details or assume an active subscription.
+- Founder ($9/month) and Pro ($19/month) are advertised plans, **not open checkout** as of November 17, 2026. Both purchase URLs currently return HTTP 503 intentionally. Do not enter payment details or assume an active subscription.
 - A ChatGPT directory listing or completed OpenAI review has **not been verified**. Do not tell people to find or install an app in the directory until its publication is confirmed.
 - Public repo scans provide findings and guidance. Do not promise one-tap repair, live push monitoring, private repo scanning, or automatic pull requests without a demonstrated product flow.
 
@@ -30,4 +30,4 @@ Search [existing issues](https://github.com/jabbertones-cloud/unloopr_support/is
 
 AI agents using an authorized GitHub connection may search issues and prepare sanitized reports. See [AGENTS.md](AGENTS.md) and [AGENT-GITHUB-ISSUES.md](AGENT-GITHUB-ISSUES.md). They must not publish a report without the user's authorization.
 
-_Last product availability check: 2026-11-10. The linked live service and repository can change independently._
+_Last website and paid-route check: 2026-11-17 (exact-main release `a11974cb`). The linked live service and support repository can change independently._

@@ -1,6 +1,6 @@
 # Getting started with Unloopr
 
-_Last checked: November 10, 2026._
+_Updated for the November 17, 2026 website release. The authenticated MCP connection details below were last independently checked on November 10._
 
 ## Scan a public GitHub repository
 
@@ -23,6 +23,6 @@ An MCP-capable coding client may connect using `https://mcp.unloopr.com/mcp` and
 
 Unloopr's publication in the ChatGPT directory has **not been independently confirmed**. Do not assume it can be found in the app directory until its listing is verified.
 
-## Plans and help
+## Explore the other engineering roles\n\nThe [seven-role engineering suite](suite.md) explains when to use Handroll Rehab, Lego Builder, Overwrite Guard, AgentGit, StateLayer and Sweepr. These are **not included as hosted features** simply because the website lists them. Only the free Unloopr scanner is public self-service today.\n\n## Plans and help
 
 Free web scans work without checkout. [Founder and Pro checkout is not open yet](pricing.md). If a connection or scan fails, see [troubleshooting](troubleshooting.md) or [private support](https://unloopr.com/support). For technical reports without secrets, use the [public issue form](https://github.com/jabbertones-cloud/unloopr_support/issues/new/choose).
